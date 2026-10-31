@@ -533,3 +533,6 @@ details .ans li{padding:2px 0}
   .float-btns{right:12px;gap:8px}
   .chat-float{padding:12px 16px;font-size:16px}
 }
+/* Фотоларға өлшем берілді (бет жүктелгенде секірмеуі үшін) — биіктікті CSS өзі есептейді */
+.news-card img,.nf-img img{height:auto}
+.news-card img{aspect-ratio:16/9}

@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=28">
+<link rel="stylesheet" href="style.css?v=29">
 </head>
 <body>
 
@@ -47,7 +47,7 @@
 <section class="news-list">
   <div class="wrap">
     <article class="news-full" id="n1">
-      <a class="nf-img" href="assets/news/bolashak-2026-07.jpg" target="_blank"><img src="assets/news/bolashak-2026-07.jpg" alt=""></a>
+      <a class="nf-img" href="assets/news/bolashak-2026-07.jpg" target="_blank"><img src="assets/news/bolashak-2026-07.jpg" alt="" width="1320" height="1495"></a>
       <div class="nf-body">
         <div class="date">📅 24 июля 2026</div>
         <h2>Приём документов на международную стипендию «Болашак» — до 16 октября</h2>
@@ -59,7 +59,7 @@
       </div>
     </article>
     <article class="news-full" id="n2">
-      <a class="nf-img" href="assets/news/mnu-2026-07.jpg" target="_blank"><img src="assets/news/mnu-2026-07.jpg" alt=""></a>
+      <a class="nf-img" href="assets/news/mnu-2026-07.jpg" target="_blank"><img src="assets/news/mnu-2026-07.jpg" alt="" width="1024" height="1536"></a>
       <div class="nf-body">
         <div class="date">📅 03 июля 2026</div>
         <h2>Maqsut Narikbayev University теперь принимает QAZAQ RESMI TEST</h2>
@@ -69,7 +69,7 @@
       </div>
     </article>
     <article class="news-full" id="n3">
-      <a class="nf-img" href="assets/news/apa-2026-04.jpg" target="_blank"><img src="assets/news/apa-2026-04.jpg" alt=""></a>
+      <a class="nf-img" href="assets/news/apa-2026-04.jpg" target="_blank"><img src="assets/news/apa-2026-04.jpg" alt="" width="1200" height="799"></a>
       <div class="nf-body">
         <div class="date">📅 01 апреля 2026</div>
         <h2>В Академии государственного управления стартовал приём документов</h2>
@@ -79,7 +79,7 @@
       </div>
     </article>
     <article class="news-full" id="n4">
-      <a class="nf-img" href="assets/news/bolashak-2026-03.jpg" target="_blank"><img src="assets/news/bolashak-2026-03.jpg" alt=""></a>
+      <a class="nf-img" href="assets/news/bolashak-2026-03.jpg" target="_blank"><img src="assets/news/bolashak-2026-03.jpg" alt="" width="875" height="518"></a>
       <div class="nf-body">
         <div class="date">📅 16 марта 2026</div>
         <h2>Стартовал приём документов по программам «Болашак» и «Научные стажировки»</h2>
@@ -121,6 +121,13 @@
   });
   menu.addEventListener('click', e => {
     if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); }
+  });
+</script>
+<script>
+  // Фотолар жүктелген соң сілтемедегі жаңалыққа қайта апару
+  window.addEventListener('load', () => {
+    const t = location.hash && document.querySelector(location.hash);
+    if (t) t.scrollIntoView();
   });
 </script>
 <!-- Jivo онлайн-чат (qrt.kz-тегі виджет) -->
