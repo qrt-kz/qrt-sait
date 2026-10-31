@@ -1,0 +1,535 @@
+/* QAZAQ RESMI TEST — ортақ стиль (қазақша және орысша беттерге) */
+:root{
+  --navy:#0e2a52; --blue:#1557a6; --blue-soft:#eaf2fc;
+  --gold:#f2b705; --gold-hover:#ffc928; --green:#1f9d55; --red:#c0392b; --wa:#25d366;
+  --text:#132131; --muted:#47596b; --line:#d8e1eb;
+  --bg:#ffffff; --bg2:#f4f7fb;
+  --radius:16px;
+  --ease-out:cubic-bezier(0.23,1,0.32,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Inter,Arial,sans-serif;font-size:18px;line-height:1.65;color:var(--text);background:var(--bg)}
+a{color:var(--blue)}
+img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:76px 0}
+section.alt{background:var(--bg2)}
+/* Тақырыптар — қазақи нақышты Philosopher; ұсақ мәтін оқуға жеңіл Inter-де қалады */
+h1,h2,h3,.price,.fact b,.lvl .code,.lvl .name,.t-name{font-family:Philosopher,Georgia,serif}
+h1,h2,h3{line-height:1.2;margin:0 0 16px}
+h1{font-size:clamp(34px,5.2vw,56px);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(30px,3.8vw,42px);font-weight:700;color:var(--navy);letter-spacing:-.01em}
+h3{font-size:21px;font-weight:700}
+.lead{font-size:20px;color:var(--muted);max-width:740px;margin:0}
+.mt{margin-top:28px}
+
+/* Батырмалар: басқанда сәл кішірейеді — сайт «жауап беріп тұрғандай» сезіледі */
+.btn{display:inline-block;padding:16px 28px;border-radius:12px;font-weight:700;font-size:18px;text-decoration:none;text-align:center;
+  transition:transform 140ms var(--ease-out),background-color 200ms ease;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.btn:active{transform:scale(.97)}
+.btn-main{background:var(--gold);color:#1a1a1a}
+.btn-line{border:2px solid rgba(255,255,255,.85);color:#fff}
+.btn-blue{background:var(--blue);color:#fff}
+@media (hover:hover) and (pointer:fine){
+  .btn-main:hover{background:var(--gold-hover)}
+  .btn-line:hover{background:rgba(255,255,255,.12)}
+  .btn-blue:hover{background:var(--navy)}
+  .menu a:hover{color:var(--blue)}
+  .card-link:hover{border-color:var(--blue)}
+}
+
+/* Жоғарғы мәзір */
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+.logo img{height:46px;width:auto}
+.menu{display:flex;gap:14px;align-items:center}
+.menu a{color:var(--text);text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap}
+.menu .btn{padding:10px 18px;font-size:16px;color:#fff}
+.lang{border:2px solid var(--line);border-radius:10px;padding:6px 12px!important;font-weight:700!important}
+.burger{display:none;background:none;border:0;font-size:32px;line-height:1;cursor:pointer;color:var(--navy);padding:8px;touch-action:manipulation}
+
+/* Басты блок */
+/* qrt.kz-тегідей фон: ашық түсті компьютер сыныбы */
+/* Сертификаттағыдай көк фон + ою (Кейт берген fon_oyu) */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#0a5e98 0%,#0d4a85 50%,#1b3570 100%);color:#fff;padding:84px 0}
+/* Ою толық көрінуі үшін суретті сол жаққа, бүтін күйінде қоямыз; шеттері көк түске сіңіп кетеді */
+.hero:before{content:"";position:absolute;inset:-10% auto -10% -6%;aspect-ratio:1413/2000;background:url(assets/fon-oyu.jpg) center/cover no-repeat;
+  -webkit-mask-image:radial-gradient(closest-side,#000 60%,transparent 100%);mask-image:radial-gradient(closest-side,#000 60%,transparent 100%);filter:contrast(1.4) brightness(1.05);pointer-events:none}
+.hero>.wrap{position:relative}
+.hero .lead{color:#dbe8f7}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.fact{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius);padding:20px}
+.fact b{display:block;font-size:30px;color:var(--gold);line-height:1.15}
+.fact span{font-size:16px;color:#e4edf8}
+
+/* Карточкалар */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.card p{margin:0;color:var(--muted)}
+.card p+p{margin-top:12px}
+.card-link{transition:border-color 200ms ease}
+.ico{font-size:34px;margin-bottom:10px;line-height:1}
+
+/* Қадамдар */
+.num{width:46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+
+/* Ескерту блоктары */
+.note{background:#fff8e1;border-left:5px solid var(--gold);padding:16px 20px;border-radius:10px;margin-top:22px}
+.warn{background:#fdecea;border-left:5px solid var(--red);padding:18px 22px;border-radius:10px;margin-top:22px}
+.warn b{color:var(--red)}
+
+/* Тест бөлімдері */
+.part{display:grid;grid-template-columns:56px 1fr auto;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px;margin-bottom:12px}
+.part .n{width:48px;height:48px;border-radius:12px;background:var(--blue-soft);color:var(--blue);font-weight:800;font-size:22px;display:flex;align-items:center;justify-content:center}
+.part h3{margin:0 0 4px}
+.part p{margin:0;color:var(--muted);font-size:17px}
+.part .meta{text-align:right;white-space:nowrap;font-size:16px;color:var(--muted)}
+.part .meta b{display:block;font-size:24px;color:var(--navy)}
+.part.big{border:2px solid var(--gold)}
+
+/* Деңгейлер */
+.lvl{border-radius:var(--radius);padding:22px;color:#fff;display:flex;flex-direction:column}
+.lvl .code{font-size:36px;font-weight:800;line-height:1.1}
+.lvl .name{font-weight:700;margin-bottom:8px}
+.lvl .desc{font-size:16px;opacity:.92;margin-bottom:12px;flex:1}
+.lvl ul{list-style:none;padding:0;margin:0;font-size:16px}
+.lvl li{padding:6px 0;border-top:1px solid rgba(255,255,255,.3);display:flex;justify-content:space-between;gap:10px}
+.a1{background:#5a8cd0}.a2{background:#3e77c1}.b1{background:#2a66b2}
+.b2{background:#1c549f}.c1{background:#13438a}.c2{background:#0a2e64}
+
+/* Баға */
+.price{font-size:clamp(44px,7vw,64px);font-weight:800;color:var(--navy);line-height:1}
+.checks{list-style:none;padding:0;margin:0}
+.checks li{padding:8px 0 8px 38px;position:relative}
+.checks li:before{content:"✓";position:absolute;left:0;top:8px;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
+
+/* Тест кімдерге керек */
+.users{columns:2;column-gap:28px;padding:0;margin:0;list-style:none}
+.users li{break-inside:avoid;padding:12px 0 12px 34px;position:relative;border-bottom:1px solid var(--line)}
+.users li:before{content:"●";position:absolute;left:8px;color:var(--gold)}
+
+/* Сұрақ-жауап */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px}
+summary{cursor:pointer;padding:20px 56px 20px 22px;font-weight:700;font-size:19px;list-style:none;position:relative;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:28px;color:var(--blue);transition:transform 200ms var(--ease-out)}
+details[open] summary:after{transform:translateY(-50%) rotate(45deg)}
+details .ans{padding:0 22px 20px;color:var(--muted)}
+details .ans ul{margin:8px 0 0;padding-left:22px}
+
+/* Жаңалықтар */
+.date{font-size:15px;font-weight:700;color:var(--blue)}
+.news h3{font-size:19px;margin-top:6px}
+
+/* Байланыс және төменгі бөлік */
+.contact .card a{font-weight:700;text-decoration:none;font-size:19px;word-break:break-word}
+footer{background:var(--navy);color:#cfdcec;padding:40px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:16px}
+footer a{color:#fff;text-decoration:none}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+
+.wa-float{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:14px 20px;border-radius:40px;box-shadow:0 6px 20px rgba(0,0,0,.2);font-size:17px;
+  transition:transform 140ms var(--ease-out);touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.wa-float:active{transform:scale(.96)}
+
+@media (max-width:1240px){
+  .menu{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;gap:4px;padding:12px 20px 20px;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.08)}
+  .menu.open{display:flex}
+  .menu a{padding:10px 0;font-size:18px}
+  .menu .lang{align-self:flex-start}
+  .burger{display:block}
+}
+@media (max-width:960px){
+  .hero-grid,.g2{grid-template-columns:1fr}
+  .g3,.g4{grid-template-columns:1fr 1fr}
+  .users{columns:1}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  section{padding:54px 0}
+  .wrap{padding:0 16px}
+  .hero{padding:56px 0}
+  .g3,.g4{grid-template-columns:1fr}
+  .logo img{height:42px}
+  .part{grid-template-columns:44px 1fr;padding:18px}
+  .part .n{width:40px;height:40px;font-size:18px}
+  .part .meta{grid-column:2;text-align:left}
+  .part .meta b{display:inline;font-size:18px;margin-right:8px}
+  .hero-btns .btn{width:100%}
+  .wa-float{padding:12px 16px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+
+/* ===== Басты блок: тақырып + сертификат үлгісі ===== */
+.hero-sub{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:40px;padding:6px 16px;font-size:16px;font-weight:600;color:#fff;margin-bottom:18px}
+.hero h1{font-size:clamp(30px,4.2vw,48px)}
+
+/* ===== Сертификат үлгісі (HTML арқылы салынған, нақты деректерсіз) ===== */
+.cert-wrap{margin:0;max-width:440px;justify-self:center;width:100%}
+.cert{container-type:inline-size;position:relative;aspect-ratio:1/1.414;overflow:hidden;border-radius:6px;
+  background:#0d4a85 url(assets/fon-oyu.jpg) center/cover no-repeat;
+  box-shadow:0 24px 60px rgba(0,0,0,.35),0 0 0 6px #fff;color:#fff;user-select:none;-webkit-user-select:none}
+.cert-in{position:absolute;inset:0;padding:7cqw 8cqw 5cqw;font-size:2.3cqw;line-height:1.35;display:flex;flex-direction:column}
+.cert-top{display:flex;justify-content:space-between;align-items:center}
+.cert-logo{width:27cqw;height:auto;display:block;
+  /* логотиптің өз көк фоны сертификат фонына сіңуі үшін шеттері мөлдірленеді */
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
+.cert-tag{font-size:1.6cqw;font-weight:700;letter-spacing:.05cqw}
+.cert-title{font-size:4.6cqw;font-weight:800;margin:6cqw 0 2.5cqw;letter-spacing:.1cqw}
+.cert hr{border:0;border-top:.15cqw solid rgba(255,255,255,.35);margin:2cqw 0}
+.cert-f{font-weight:700;margin:1.4cqw 0;display:flex;gap:1cqw;align-items:baseline;white-space:nowrap}
+.blank{flex:1;border-bottom:.25cqw dashed rgba(255,255,255,.6);height:2.4cqw;font-style:normal;font-weight:400;opacity:.75;overflow:hidden;font-size:1.9cqw}
+.cert-mid{display:grid;grid-template-columns:1.25fr 1fr;gap:4cqw}
+.cert-h{font-weight:800;font-size:2.4cqw;margin:2.4cqw 0 1.6cqw;opacity:.9}
+.cert-t{width:100%;border-collapse:collapse;min-width:0}
+.cert-t th,.cert-t td{padding:.8cqw 0;border:0;background:none;text-align:left;font-size:2.2cqw}
+.cert-t th{color:#f2c94c;font-weight:700}
+.cert-t td+td,.cert-t th+th{text-align:right;white-space:nowrap}
+.cert-lvl{font-weight:800;font-size:3.6cqw;line-height:1.3}
+.cert-qr{background:#fff;padding:2cqw;margin-top:2.5cqw}
+.cert-qr img{width:100%}
+.cert-chart{display:flex;align-items:flex-end;gap:3cqw;height:16cqw;padding-left:1cqw;border-bottom:.15cqw solid rgba(255,255,255,.4);
+  background:repeating-linear-gradient(to top,rgba(255,255,255,.18) 0 .15cqw,transparent .15cqw 20%);max-width:72%}
+.cert-chart i{flex:1;background:#dbb259;display:block}
+.cert-labels{display:flex;gap:3cqw;padding-left:1cqw;max-width:72%;font-size:1.5cqw;margin-top:.8cqw}
+.cert-labels span{flex:1}
+.cert-foot{margin-top:auto;display:flex;align-items:center;gap:2cqw;font-size:1.5cqw;opacity:.8}
+.cert-foot .emb{width:7cqw;height:7cqw;border-radius:50%;border:.35cqw solid rgba(255,255,255,.85);flex:none;object-fit:cover}
+.cert-stamp{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-28deg);font-size:13cqw;font-weight:800;letter-spacing:2cqw;
+  color:rgba(242,183,5,.42);border:1cqw solid rgba(242,183,5,.42);padding:1cqw 5cqw;border-radius:3cqw;pointer-events:none;white-space:nowrap}
+.cert-stamp.short{font-size:20cqw}
+.cert-wrap figcaption{text-align:center;color:#dbe8f7;font-size:15px;margin-top:16px}
+
+@media (max-width:960px){
+  .cert-wrap{max-width:400px;margin-top:10px}
+}
+
+/* ===== Деректер жолағы («Тест туралы» бөлімінде) ===== */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px}
+.stats .fact{background:var(--blue-soft);border:0;padding:20px 22px}
+.stats .fact b{color:var(--blue);font-size:30px}
+.stats .fact span{color:var(--muted);font-size:16px}
+
+/* ===== Тарифтер мен промокод ===== */
+.tariffs{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.tariff{position:relative;background:#fff;border:2px solid var(--line);border-radius:24px;padding:34px;display:flex;flex-direction:column;gap:18px}
+.tariff.hot{border:3px solid var(--gold);box-shadow:0 16px 40px rgba(242,183,5,.18)}
+.tariff .checks{flex:1}
+.tariff .btn{align-self:flex-start}
+.t-name{font-size:20px;font-weight:700;color:var(--muted)}
+.badge{position:absolute;top:-16px;left:30px;background:var(--gold);color:#1a1a1a;font-weight:700;font-size:15px;padding:5px 14px;border-radius:20px}
+.promo{display:flex;gap:22px;margin-top:28px;background:#fffaf0;border:2px dashed var(--gold);border-radius:24px;padding:30px}
+.promo-ico{font-size:44px;line-height:1}
+.promo h3{margin-bottom:6px}
+.promo p{margin:0;color:var(--muted)}
+.promo-steps{margin:16px 0 0;padding-left:22px}
+.promo-steps li{padding:4px 0}
+
+@media (max-width:960px){
+  .stats{grid-template-columns:1fr 1fr}
+  .tariffs{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .tariff{padding:28px 22px}
+  .promo{flex-direction:column;padding:24px 20px;gap:10px}
+  .stats .fact b{font-size:24px}
+}
+
+/* ===== Нұсқаулық беті ===== */
+.page-hero{padding:64px 0}
+.page-hero:before{display:none}
+.page-hero .lead{max-width:800px}
+.menu a.active{color:var(--blue);box-shadow:inset 0 -3px 0 var(--gold)}
+.part.simple{grid-template-columns:56px 1fr}
+.checks.no li:before{content:"✕";background:var(--red)}
+.alarm{display:flex;gap:24px;background:#fdecea;border:2px solid var(--red);border-radius:24px;padding:32px}
+.alarm h2{color:var(--red);font-size:clamp(22px,2.6vw,30px)}
+.alarm ul{margin:0;padding-left:22px;font-size:19px}
+.alarm li{padding:4px 0}
+.alarm-ico{flex:none;width:64px;height:64px;border-radius:50%;background:var(--red);color:#fff;font-size:40px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.memo{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:start}
+.memo img{width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(0,0,0,.08)}
+.memo-side{display:grid;gap:20px;position:sticky;top:96px}
+.dl{font-weight:700;text-decoration:none}
+@media (max-width:960px){
+  .memo{grid-template-columns:1fr}
+  .memo-side{position:static}
+}
+@media (max-width:600px){
+  .alarm{flex-direction:column;padding:24px 20px;gap:14px}
+  .alarm-ico{width:52px;height:52px;font-size:32px}
+}
+.logo{flex:none}
+
+/* ===== Ою ===== */
+.oyu-divider{display:flex;justify-content:center;padding:18px 16px 0;overflow:hidden}
+.oyu-divider img{width:min(1138px,180%);max-width:none;height:auto}
+
+/* ===== 100% масштабта бірінші экранға сыю ===== */
+/* Сертификат экран биіктігіне қарай кішірейеді: биіктік − мәзір(76) − жоғары/төмен бос орын − жазу */
+.hero{padding:48px 0}
+.hero h1{font-size:clamp(30px,3.6vw,46px)}
+.hero-sub{margin-bottom:14px}
+.hero-btns{margin-top:24px}
+.cert-wrap{max-width:min(420px,calc((100vh - 76px - 96px - 48px) / 1.414));max-width:min(420px,calc((100svh - 76px - 96px - 48px) / 1.414))}
+.cert-wrap figcaption{margin-top:12px}
+/* Жадынама суреті де экраннан аспайды */
+.memo>a{display:block;justify-self:center}
+.memo img{width:auto;max-width:100%;max-height:calc(100svh - 120px)}
+@media (max-width:960px){
+  .cert-wrap{max-width:min(400px,100%)}
+  .memo img{max-height:none;width:100%}
+}
+
+/* ===== Ықшамырақ: биіктік қысқартылды (Кейттің өтініші) ===== */
+body{font-size:17px}
+section{padding:56px 0}
+.nav{height:64px}
+html{scroll-padding-top:72px}
+.logo img{height:40px}
+.hero{padding:28px 0}
+.hero h1{font-size:clamp(28px,3vw,40px);margin-bottom:12px}
+.hero .lead{font-size:18px;line-height:1.55}
+.hero-sub{font-size:15px;padding:5px 14px;margin-bottom:10px}
+.hero-btns{margin-top:20px}
+.hero .btn{padding:13px 24px;font-size:17px}
+.cert-wrap{max-width:min(360px,calc((100vh - 64px - 56px - 40px) / 1.414));max-width:min(360px,calc((100svh - 64px - 56px - 40px) / 1.414))}
+.cert-wrap figcaption{margin-top:8px;font-size:14px}
+.page-hero{padding:40px 0}
+.oyu-divider{padding-top:12px}
+h2{font-size:clamp(28px,3.2vw,36px)}
+@media (max-width:1240px){.menu{top:64px}}
+@media (max-width:960px){.cert-wrap{max-width:min(360px,100%)}}
+@media (max-width:600px){section{padding:44px 0}.hero{padding:36px 0}}
+
+/* ===== Кіріспе мәтіндер бір жолға созылып жазылады; бөлім иконкалары ===== */
+section:not(.hero) .lead{max-width:none}
+.part .n.ico-n{font-size:26px}
+.part .meta{line-height:1.35}
+
+/* ===== Әр бөлім ноутбук экранына (≈1280×700) толық сыюы үшін ықшамдау ===== */
+@media (min-width:961px){
+  section{padding:36px 0}
+  h2{font-size:clamp(26px,2.8vw,34px);margin-bottom:8px}
+  h3{font-size:19px;margin-bottom:6px}
+  .lead{font-size:17px}
+  .mt{margin-top:18px}
+  .card{padding:16px 20px}
+  .card p{font-size:15.5px;line-height:1.5}
+  .card p+p{margin-top:8px}
+  .ico{font-size:26px;margin-bottom:6px}
+  .num{width:38px;height:38px;font-size:17px;margin-bottom:8px}
+  .note,.warn{margin-top:14px;padding:10px 18px;font-size:16px;line-height:1.5}
+  .stats{margin-top:16px;gap:14px}
+  .stats .fact{padding:12px 18px}
+  .stats .fact b{font-size:26px}
+  .stats .fact span{font-size:15px}
+  /* Тест бөлімдері */
+  .part{padding:10px 20px;margin-bottom:8px;gap:16px}
+  .part .n{width:42px;height:42px}
+  .part p{font-size:15.5px;line-height:1.45}
+  .part .meta{font-size:15px}
+  .part .meta b{font-size:21px}
+  /* Деңгейлер бір қатарда */
+  #levels .grid{grid-template-columns:repeat(6,1fr);gap:12px}
+  .lvl{padding:14px}
+  .lvl .code{font-size:28px}
+  .lvl .name{font-size:16px;line-height:1.25;margin-bottom:6px}
+  .lvl .desc{font-size:14px;line-height:1.45;margin-bottom:8px}
+  .lvl ul{font-size:14px}
+  .lvl li{padding:3px 0}
+  /* Кімге керек — 3 баған */
+  .users{columns:3;column-gap:24px}
+  .users li{padding:7px 0 7px 26px;font-size:15.5px;line-height:1.45}
+  .users li:before{left:4px}
+  /* Баға */
+  .tariffs{gap:20px}
+  .tariff{padding:22px 26px;gap:10px;border-radius:20px}
+  .price{font-size:44px}
+  .tariff .checks li{padding:4px 0 4px 34px}
+  .tariff .checks li:before{top:5px;width:24px;height:24px}
+  .tariff .btn{padding:11px 22px;font-size:16px}
+  .promo{margin-top:16px;padding:16px 22px;gap:16px;border-radius:20px}
+  .promo-ico{font-size:34px}
+  .promo p{font-size:15.5px}
+  .promo-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:10px;padding-left:18px;font-size:15px;line-height:1.45}
+  .promo-steps li{padding:0}
+  /* Сұрақ-жауап — 2 баған */
+  #faq .mt{columns:2;column-gap:16px}
+  #faq details{break-inside:avoid;margin-bottom:10px}
+  summary{padding:13px 48px 13px 18px;font-size:17px}
+  details .ans{padding:0 18px 14px;font-size:16px}
+  /* Нұсқаулық беті */
+  .mt:has(>.part.simple){display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .mt:has(>.part.simple) .part{margin:0}
+  .alarm{padding:22px 26px;gap:20px}
+  .alarm ul{font-size:17px}
+  .memo img{max-height:calc(100svh - 64px - 170px)}
+  .memo-side{top:80px;gap:14px}
+}
+@media (min-width:961px){
+  #structure .part{padding:8px 18px;margin-bottom:7px}
+  #structure .part h3{font-size:18px;margin-bottom:2px}
+  #structure .part p{font-size:15px;line-height:1.4}
+  .tariff .checks{columns:2;column-gap:16px}
+  .tariff .checks li{break-inside:avoid;font-size:16px;line-height:1.4}
+  .card .checks li{padding:4px 0 4px 34px;font-size:16px;line-height:1.45}
+  .card .checks li:before{top:5px;width:24px;height:24px}
+  .part.simple p{font-size:15px;line-height:1.45}
+}
+@media (min-width:961px){
+  /* пайыз сол жақта, сұрақ/уақыт оң жақта — 3 жол емес, 2 жол */
+  #structure .part .meta{line-height:1.3}
+  #structure .part .meta b{display:inline-block;vertical-align:middle;margin-right:10px;float:left;line-height:2.4}
+  .tariff{padding:18px 24px}
+  .price{font-size:40px}
+  #price .lead{display:none}
+}
+
+/* ===== Жүйені қолданушылар: логотипті карточкалар ===== */
+.orgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.org{position:relative;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 34px 12px 12px;color:var(--text);text-decoration:none;font-size:15px;line-height:1.35;font-weight:600;transition:border-color 200ms ease,transform 140ms var(--ease-out);touch-action:manipulation}
+.org img{width:56px;height:56px;object-fit:contain;flex:none;border-radius:10px}
+.org i{position:absolute;top:8px;right:12px;font-style:normal;color:var(--blue);font-weight:700}
+a.org:active{transform:scale(.98)}
+@media (hover:hover) and (pointer:fine){
+  a.org:hover,.news-card:hover,.chip:hover{border-color:var(--blue)}
+  .subnav a:hover{background:var(--blue-soft)}
+  .btn-line-blue:hover{background:var(--blue);color:#fff}
+}
+
+/* ===== Жүйе туралы беті ===== */
+.subnav{position:sticky;top:64px;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
+.subnav .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+.subnav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-weight:600;font-size:15px;padding:8px 16px;border-radius:30px;border:1px solid var(--line);transition:background-color 200ms ease;touch-action:manipulation}
+html:has(.subnav){scroll-padding-top:130px}
+.uuid{margin-top:18px;background:var(--navy);color:#fff;border-radius:14px;padding:14px 20px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:16px}
+.uuid code{font-family:ui-monospace,Menlo,monospace;color:var(--gold);font-size:17px;word-break:break-all}
+.acts{display:grid;gap:22px}
+.act-group h3{color:var(--navy);margin-bottom:10px}
+.act{display:grid;grid-template-columns:44px 1fr auto;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+.act-ico{width:44px;height:44px;border-radius:10px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:22px}
+.act h4{margin:0 0 2px;font-size:17px;color:var(--text)}
+.act p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.45}
+.act small{display:block;margin-top:4px;color:var(--blue);font-size:14px;line-height:1.4}
+.btn-line-blue{border:2px solid var(--blue);color:var(--blue);padding:9px 16px;font-size:15px;white-space:nowrap;transition:background-color 200ms ease,color 200ms ease,transform 140ms var(--ease-out)}
+
+/* ===== Жаңалықтар ===== */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.news-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:var(--text);transition:border-color 200ms ease,transform 140ms var(--ease-out)}
+.news-card:active{transform:scale(.98)}
+.news-card img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top}
+.nc-body{padding:14px 18px 16px;display:flex;flex-direction:column;flex:1}
+.nc-body h3{font-size:18px;margin:4px 0 10px}
+.more{margin-top:auto;color:var(--blue);font-weight:700;font-size:15px}
+.news-list{padding-top:36px}
+.news-full{display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;margin-bottom:22px;scroll-margin-top:84px}
+.nf-img img{width:100%;max-height:calc(100svh - 160px);object-fit:contain;background:var(--bg2);border-radius:12px}
+.news-full h2{font-size:clamp(22px,2.4vw,28px);margin:6px 0 10px}
+.nf-body p{margin:0 0 10px;color:var(--muted);font-size:16.5px;line-height:1.6}
+.nf-body .lst-h{margin-bottom:2px;color:var(--text)}
+.nf-body .checks li{padding:4px 0 4px 34px;font-size:16px;line-height:1.45}
+.nf-body .checks li:before{top:5px;width:24px;height:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{display:inline-block;padding:7px 14px;border-radius:30px;border:1px solid var(--line);background:var(--bg2);text-decoration:none;font-weight:600;font-size:15px;transition:border-color 200ms ease}
+@media (max-width:960px){
+  .news-grid{grid-template-columns:1fr 1fr}
+  .news-full{grid-template-columns:1fr}
+  .nf-img img{max-height:420px}
+  .act{grid-template-columns:44px 1fr}
+  .act .btn{grid-column:2;justify-self:start}
+}
+@media (max-width:600px){
+  .news-grid{grid-template-columns:1fr}
+  .news-full{padding:16px}
+}
+/* Мәзірге 2 жаңа бет қосылды — сыюы үшін сәл ықшам */
+@media (min-width:1241px){
+  .nav{gap:12px}
+  .menu{gap:12px}
+  .menu a{font-size:14.5px}
+  .menu .lang{padding:5px 10px!important}
+  .menu .btn{padding:9px 14px;font-size:15px}
+  .logo img{height:36px}
+}
+@media (min-width:1241px) and (max-width:1400px){
+  .menu{gap:10px}
+  .menu a{font-size:14px}
+}
+.orgs{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+/* Актілер санаттарының батырмалары */
+.act-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.act-tabs button{font:inherit;font-size:15px;font-weight:600;color:var(--navy);background:#fff;border:2px solid var(--line);border-radius:30px;padding:8px 16px;cursor:pointer;touch-action:manipulation;user-select:none;-webkit-user-select:none;transition:background-color 200ms ease,border-color 200ms ease,transform 140ms var(--ease-out)}
+.act-tabs button:active{transform:scale(.97)}
+.act-tabs button[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.act-group h3{display:none}
+@media (hover:hover) and (pointer:fine){.act-tabs button[aria-selected="false"]:hover{border-color:var(--blue)}}
+/* Басты беттегі қолданушылар — 4 баған, ықшам */
+@media (min-width:961px){
+  #users .orgs{grid-template-columns:repeat(4,1fr);gap:10px}
+  #users .org{padding:8px 30px 8px 10px;font-size:14px;gap:10px}
+  #users .org img{width:44px;height:44px}
+}
+@media (min-width:961px){
+  #users .org{font-size:13.5px;line-height:1.28;padding:7px 28px 7px 10px}
+  #users .org img{width:40px;height:40px}
+  #users .orgs+.mt{margin-top:12px}
+  #users .orgs+.mt .btn{padding:9px 18px;font-size:15px}
+}
+@media (min-width:961px){
+  .promo-steps{padding-left:0;list-style-position:inside}
+  .promo-steps li{padding-left:1.2em;text-indent:-1.2em}
+}
+/* Сұрақ-жауап: бағандар columns емес, grid арқылы — «+» белгісі көрші бағанға ауыспайды */
+@media (min-width:961px){
+  #faq .mt{columns:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;align-items:start}
+  #faq details{margin:0}
+}
+/* Кіру де батырма болды — мәзір сыюы үшін */
+@media (min-width:1241px) and (max-width:1400px){
+  .menu{gap:9px}
+  .menu .btn{padding:9px 12px}
+}
+/* Сұрақ-жауап: толық жауаптар (qrt.kz-тен) */
+details .ans p{margin:0 0 8px}
+details .ans ul{margin:4px 0 10px}
+details .ans li{padding:2px 0}
+/* Екі баған бір-бірінен тәуелсіз: бір сұрақ ашылса, көрші баған қозғалмайды */
+.faq-col{display:flex;flex-direction:column;gap:10px}
+.faq-col details{margin:0}
+@media (max-width:960px){ #faq .mt{display:flex;flex-direction:column;gap:10px} }
+/* «Тест неден тұрады?»: пайыздар бір бағанда, бірдей белгі түрінде */
+#structure .part{grid-template-columns:56px 1fr 270px}
+#structure .part .meta{display:flex;align-items:center;gap:14px;text-align:left;white-space:normal}
+#structure .part .meta b{float:none;margin:0;flex:none;width:64px;padding:6px 0;text-align:center;border-radius:10px;background:var(--blue-soft);color:var(--blue);font-size:20px;line-height:1.2}
+#structure .part.big .meta b{background:var(--gold);color:#1a1a1a}
+#structure .part .meta span{font-size:15px;line-height:1.35;color:var(--muted)}
+@media (max-width:600px){
+  #structure .part{grid-template-columns:44px 1fr}
+  #structure .part .meta{grid-column:2}
+  #structure .part .meta b{display:block;font-size:17px;width:56px}
+}
+
+/* ===== Төменгі оң жақтағы батырмалар: Онлайн-чат (Jivo) + WhatsApp ===== */
+.float-btns{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;gap:10px;align-items:center}
+.float-btns .wa-float{position:static}
+.chat-float{display:none;font:inherit;font-weight:700;font-size:17px;color:#fff;border:0;cursor:pointer;padding:14px 20px;border-radius:40px;
+  background:linear-gradient(95deg,#0055c9 20%,#18b9d4 80%);box-shadow:0 6px 20px rgba(0,0,0,.2);
+  transition:transform 140ms var(--ease-out);touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.chat-float:active{transform:scale(.96)}
+.jivo-ready .chat-float{display:block}
+/* Jivo-ның өз жолағы жасырылады — орнына біздің батырма */
+#jvLabelWrap,.__jivoMobileButton{display:none!important}
+@media (max-width:600px){
+  .float-btns{right:12px;gap:8px}
+  .chat-float{padding:12px 16px;font-size:16px}
+}

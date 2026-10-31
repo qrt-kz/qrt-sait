@@ -1,0 +1,14 @@
+QAZAQ RESMI TEST — жаңа сайт (дизайн жобасы)
+
+Компьютерде ашу:
+  index.html файлын екі рет басыңыз (қазақша нұсқа).
+  Орысша нұсқа: ru.html
+  Ең дұрыс көрінетін браузер: Google Chrome.
+
+Беттер:
+  index.html / ru.html               — басты бет
+  nuskaulyk.html / instrukciya.html  — кандидатқа нұсқаулық
+  zhuye.html / sistema.html          — жүйе туралы, қолданушылар, нормативтік актілер
+  zhanalyqtar.html / novosti.html    — жаңалықтар
+
+Ескерту: барлық файл бір бумада тұруы керек (assets бумасы мен style.css қоса).
