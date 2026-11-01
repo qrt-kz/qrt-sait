@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Жазылымға жаттығу — QAZAQ RESMI TEST</title>
+<meta name="description" content="Жасанды интеллект жазылым мәтініңізді тексеріп, қателер мен кеңестерді көрсетеді.">
+<link rel="icon" href="assets/logo.png">
+<link rel="alternate" hreflang="ru" href="pismo.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=30">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><img src="assets/logo.png" alt="QAZAQ RESMI TEST" width="293" height="92"></a>
+    <button class="burger" aria-label="Мәзір" aria-expanded="false">☰</button>
+    <nav class="menu">
+      <a href="index.html#about">Тест туралы</a>
+      <a href="index.html#steps">Қалай тапсырамын?</a>
+      <a href="index.html#price">Бағасы</a>
+      <a href="nuskaulyk.html">Нұсқаулық</a>
+      <a href="zhuye.html">Жүйе туралы</a>
+      <a href="zhanalyqtar.html">Жаңалықтар</a>
+      <a href="index.html#faq">Сұрақ-жауап</a>
+      <a href="index.html#contact">Байланыс</a>
+      <a class="lang" href="pismo.html" hreflang="ru">RU</a>
+      <a class="btn btn-blue" href="https://test.qrt.kz/login">Кіру</a>
+      <a class="btn btn-blue" href="https://test.qrt.kz/register">Тіркелу</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero page-hero">
+  <div class="wrap">
+    <div class="hero-sub">🤖 Жасанды интеллект жаттықтырушысы</div>
+    <h1>Жазылымға жаттығу</h1>
+    <p class="lead">Жазылым — бағаның 35%-ы. Тақырыпты таңдап, 15 минут ішінде мәтін жазыңыз. Жасанды интеллект оны тексеріп, қателеріңізді және нені жақсарту керегін көрсетеді.</p>
+  </div>
+</section>
+
+<section class="trainer">
+  <div class="wrap tr-grid">
+    <form class="tr-main" id="trForm" novalidate>
+      <div class="card">
+        <h3>1. Тақырыпты таңдаңыз</h3>
+        <div class="tr-topic">
+          <select id="trTopic" aria-label="1. Тақырыпты таңдаңыз">
+          <option>Мемлекеттік тілдің қоғам өміріндегі рөлі</option>
+          <option>Цифрлық технологиялар және мемлекеттік қызмет сапасы</option>
+          <option>Жастарды еңбекке баулу — ел болашағының кепілі</option>
+          <option>Білім сапасын арттырудың жолдары</option>
+          <option>Экологиялық мәдениет және азаматтық жауапкершілік</option>
+          <option>Сыбайлас жемқорлыққа қарсы тұру — әр азаматтың міндеті</option>
+          <option>Ұлттық құндылықтар және жаһандану</option>
+          <option>Кітап оқу мәдениетін дамыту қажеттілігі</option>
+          <option>Салауатты өмір салты — табысты қызметтің негізі</option>
+          <option>Еріктілік қызметтің қоғамдағы маңызы</option>
+          <option>Ауыл мен қала арасындағы әлеуметтік теңдік</option>
+          <option>Жасанды интеллект: мүмкіндіктер мен қауіптер</option>
+          <option>Отбасы — қоғамның негізгі құндылығы</option>
+          <option>Кәсіби этика және мемлекеттік қызметші мәдениеті</option>
+          <option>Қаржылық сауаттылықты арттыру</option>
+          <option>Туризмді дамыту — экономиканың жаңа бағыты</option>
+          <option>Тарихи жадыны сақтау және ұрпақ сабақтастығы</option>
+          <option>Инклюзивті қоғам құру жолдары</option>
+          </select>
+          <button type="button" class="btn btn-line-blue" id="trRandom">🎲 Кездейсоқ тақырып</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="tr-head">
+          <h3>2. Мәтінді жазыңыз</h3>
+          <button type="button" class="tr-timer" id="trTimer" aria-live="polite">⏱ 15 минутты бастау</button>
+        </div>
+        <textarea id="trText" lang="kk" spellcheck="false" placeholder="Мәтінді осында жазыңыз: кіріспе, негізгі ой және дәлелдер, қорытынды..." maxlength="5000"></textarea>
+        <div class="tr-count" id="trCount">0 сөз · 0 таңба</div>
+        <div class="tr-actions">
+          <button type="submit" class="btn btn-main" id="trSubmit">Мәтінді тексеру</button>
+          <span class="tr-left" id="trLeft"></span>
+        </div>
+        <p class="tr-msg" id="trMsg" role="status"></p>
+      </div>
+    </form>
+    <aside class="tr-side">
+      <div class="card">
+        <h3>Мәтін қалай бағаланады?</h3>
+        <ol class="tr-crit">
+          <li><b>Тақырыпқа сәйкестік және негізгі ой</b><span>Тақырып ашылды ма, негізгі ойдың өзектілігі көрсетілді ме</span></li>
+          <li><b>Дәлелдер</b><span>Пікір мысалдармен, фактілермен дәлелденді ме</span></li>
+          <li><b>Құрылым</b><span>Кіріспе, негізгі бөлім, қорытынды бар ма</span></li>
+          <li><b>Ресми-іскерлік стиль</b><span>Ауызекі, эмоциялық сөздер жоқ па</span></li>
+          <li><b>Сауаттылық</b><span>Орфография, грамматика, тыныс белгілері</span></li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>Пайдалы кеңестер</h3>
+        <ul class="checks"><li>Мәтінді 3 бөлікке бөліңіз: кіріспе, негізгі бөлім, қорытынды.</li><li>Әр пікірді бір мысалмен немесе дерекпен дәлелдеңіз.</li><li>Ауызекі сөздерді («керемет», «жақсы ғой») қолданбаңыз.</li><li>Соңғы 2 минутта мәтінді қайта оқып шығыңыз.</li></ul>
+      </div>
+      <div class="note">⚠️ Бұл — жаттығу. Жасанды интеллекттің бағасы ресми нәтиже емес, тек дайындыққа арналған бағдар. Күніне 3 рет тегін тексеруге болады.</div>
+    </aside>
+  </div>
+</section>
+
+<section class="alt tr-result" id="trResult" hidden>
+  <div class="wrap">
+    <h2>Тексеру нәтижесі</h2>
+    <div id="trOut"></div>
+    <p class="mt"><button type="button" class="btn btn-blue" id="trAgain">Тағы жазу</button></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 QAZAQ RESMI TEST<br>ISBN 978-601-287-226-2</div>
+    <div class="foot-links">
+      <a href="index.html">Басты бет</a>
+      <a href="zhuye.html">Жүйе туралы</a>
+      <a href="zhanalyqtar.html">Жаңалықтар</a>
+      <a href="https://test.qrt.kz/register">Тіркелу</a>
+      <a href="https://test.qrt.kz/login">Кіру</a>
+      <a href="https://certificate.qrt.kz/certificate">Сертификат</a>
+      <a href="pismo.html" hreflang="ru">Русский</a>
+    </div>
+  </div>
+</footer>
+
+<div class="float-btns">
+  <button type="button" class="chat-float">🗨️ Онлайн-чат</button>
+  <a class="wa-float" href="https://wa.me/77778024348">💬 WhatsApp</a>
+</div>
+
+<script>
+  // Мәзір: ашу/жабу
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  menu.addEventListener('click', e => {
+    if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); }
+  });
+
+</script>
+<script>
+  // Жазылым жаттықтырушысы. API_URL — Railway-дегі сервердің мекенжайы; бос болса, демо режим.
+  const API_URL = '';
+  const LANG = 'kk';
+  const T = {"left": "Бүгін {n} тексеру қалды", "checking": "Тексеріліп жатыр… (шамамен 30 секунд)", "timer_start": "⏱ 15 минутты бастау", "timer_stop": "⏸ Тоқтату", "words": "сөз", "chars": "таңба", "lvl": "Шамамен деңгей", "crit_h": "Критерийлер бойынша", "mis_h": "Қателер және дұрыс нұсқасы", "mis_w": "Сіз жаздыңыз", "mis_c": "Дұрысы", "str_h": "👍 Жақсы тұстары", "tip_h": "💡 Келесі жолы", "imp_h": "✍️ Бір абзацтың жақсартылған нұсқасы", "demo": "Демо режим: жасанды интеллект әлі қосылмаған. Төменде нәтиженің қалай көрінетінін үлгі ретінде көрсеттік — сіздің мәтініңіз тексерілген жоқ.", "off": "Мәтін тақырыпқа сәйкес емес сияқты. Таңдалған тақырыпқа жазып көріңіз.", "err": {"too_short": "Мәтін тым қысқа. Кемінде 200 таңба (шамамен 30 сөз) жазыңыз.", "too_long": "Мәтін тым ұзын (5000 таңбадан аспауы керек).", "user_limit": "Бүгінгі 3 тексеру таусылды. Ертең қайта келіңіз!", "total_limit": "Бүгін жаттықтырушыға сұраныс көп болды. Ертең қайта көріңіз.", "busy": "Жүйе қазір бос емес. Бір минуттан кейін қайта көріңіз.", "not_checked": "Мәтінді тексеру мүмкін болмады. Басқаша жазып көріңіз.", "net": "Байланыс жоқ. Интернетті тексеріп, қайта көріңіз.", "default": "Қате шықты. Сәл кейінірек қайта көріңіз."}, "btn": "Мәтінді тексеру"};
+  const DEMO = {"on_topic": true, "level_estimate": "B1", "summary": "Тақырып жалпы ашылған, негізгі ой түсінікті. Бірақ дәлелдер аз, қорытынды жоқ, бірнеше сауаттылық қатесі бар.", "criteria": [{"name": "Тақырыпқа сәйкестік және негізгі ой", "score": 4, "comment": "Мемлекеттік тілдің маңызы айтылған, бірақ өзектілігі (неге дәл қазір маңызды) толық ашылмаған."}, {"name": "Дәлелдер", "score": 2, "comment": "Пікір бар, бірақ оны дәлелдейтін нақты мысал немесе дерек жоқ."}, {"name": "Құрылым", "score": 3, "comment": "Кіріспе мен негізгі бөлім бар, қорытынды жоқ."}, {"name": "Ресми-іскерлік стиль", "score": 3, "comment": "«Менің ойымша, бұл өте керемет» сияқты ауызекі тіркестер ресми стильге сай емес."}, {"name": "Сауаттылық", "score": 3, "comment": "Бірнеше орфографиялық және тыныс белгі қатесі бар."}], "mistakes": [{"wrong": "мемлекетік тіл", "correct": "мемлекеттік тіл", "explanation": "«Мемлекет» сөзіне -тік жұрнағы жалғанғанда екі т жазылады."}, {"wrong": "бұл өте керемет", "correct": "бұл аса маңызды", "explanation": "Ресми-іскерлік стильде эмоциялық сөздердің орнына бейтарап сөз қолданылады."}, {"wrong": "Сондықтанда", "correct": "Сондықтан да", "explanation": "«Да» шылауы бөлек жазылады."}], "strengths": ["Негізгі ой бірінші сөйлемнен-ақ түсінікті.", "Сөйлемдер қысқа әрі нақты."], "tips": ["Әр пікірден кейін бір нақты мысал немесе дерек келтіріңіз.", "Мәтінді «Қорытындылай келе, ...» деп басталатын қорытындымен аяқтаңыз.", "«Керемет», «өте жақсы» сияқты сөздердің орнына «маңызды», «тиімді» деген сөздерді қолданыңыз.", "Жазып болған соң 2 минут қалдырып, мәтінді қайта оқып шығыңыз."], "improved_paragraph": "Мемлекеттік тіл — елдің бірлігі мен тұтастығының негізгі тірегі. Қазіргі таңда мемлекеттік қызметтердің басым бөлігі қазақ тілінде көрсетіледі, сондықтан әрбір азаматтың мемлекеттік тілді меңгеруі аса маңызды."};
+
+  const $ = id => document.getElementById(id);
+  const topic = $('trTopic'), text = $('trText'), msg = $('trMsg'), submit = $('trSubmit');
+
+  // Жоба сақталады (тек осы браузерде)
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
+  };
+  if (store.get('qrt-topic')) topic.value = store.get('qrt-topic');
+  if (store.get('qrt-text')) text.value = store.get('qrt-text');
+  const left = store.get('qrt-left-' + new Date().toISOString().slice(0, 10));
+  if (left !== null) $('trLeft').textContent = T.left.replace('{n}', left);
+
+  const count = () => {
+    const w = text.value.trim() ? text.value.trim().split(/\s+/).length : 0;
+    $('trCount').textContent = w + ' ' + T.words + ' · ' + text.value.length + ' ' + T.chars;
+  };
+  text.addEventListener('input', () => { count(); store.set('qrt-text', text.value); });
+  topic.addEventListener('change', () => store.set('qrt-topic', topic.value));
+  count();
+
+  $('trRandom').addEventListener('click', () => {
+    topic.selectedIndex = Math.floor(Math.random() * topic.options.length);
+    store.set('qrt-topic', topic.value);
+  });
+
+  // 15 минуттық таймер
+  let timer = null, secs = 900;
+  const timerBtn = $('trTimer');
+  const fmt = s => String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+  timerBtn.addEventListener('click', () => {
+    if (timer) { clearInterval(timer); timer = null; timerBtn.textContent = T.timer_start; timerBtn.classList.remove('on'); return; }
+    if (secs <= 0) secs = 900;
+    timerBtn.classList.add('on');
+    timerBtn.textContent = '⏱ ' + fmt(secs) + ' · ' + T.timer_stop;
+    timer = setInterval(() => {
+      secs--;
+      timerBtn.textContent = '⏱ ' + fmt(secs) + ' · ' + T.timer_stop;
+      if (secs <= 60) timerBtn.classList.add('late');
+      if (secs <= 0) { clearInterval(timer); timer = null; timerBtn.textContent = '⏱ 00:00'; }
+    }, 1000);
+  });
+
+  // Нәтижені шығару (тек textContent — қауіпсіз)
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  function render(fb, demo) {
+    const out = $('trOut'); out.replaceChildren();
+    if (demo) out.append(el('div', 'note tr-demo', T.demo));
+    if (!fb.on_topic) out.append(el('div', 'warn', T.off));
+    const top = el('div', 'tr-top');
+    const lvl = el('div', 'tr-lvl'); lvl.append(el('span', '', T.lvl), el('b', '', fb.level_estimate));
+    top.append(lvl, el('p', 'tr-sum', fb.summary));
+    out.append(top);
+
+    const crit = el('div', 'card tr-block'); crit.append(el('h3', '', T.crit_h));
+    for (const c of fb.criteria) {
+      const row = el('div', 'tr-row');
+      const head = el('div', 'tr-row-h'); head.append(el('b', '', c.name), el('span', '', c.score + ' / 5'));
+      const bar = el('div', 'tr-bar'); const fill = el('i'); fill.style.width = (c.score * 20) + '%';
+      fill.dataset.s = c.score; bar.append(fill);
+      row.append(head, bar, el('p', '', c.comment)); crit.append(row);
+    }
+    out.append(crit);
+
+    if (fb.mistakes.length) {
+      const mis = el('div', 'card tr-block'); mis.append(el('h3', '', T.mis_h));
+      for (const m of fb.mistakes) {
+        const r = el('div', 'tr-mis');
+        const w = el('div', 'tr-w'); w.append(el('small', '', T.mis_w), el('s', '', m.wrong));
+        const c = el('div', 'tr-c'); c.append(el('small', '', T.mis_c), el('b', '', m.correct));
+        r.append(w, c, el('p', '', m.explanation)); mis.append(r);
+      }
+      out.append(mis);
+    }
+    const two = el('div', 'grid g2');
+    for (const [h, list] of [[T.str_h, fb.strengths], [T.tip_h, fb.tips]]) {
+      const c = el('div', 'card'); c.append(el('h3', '', h));
+      const ul = el('ul', 'checks'); for (const x of list) ul.append(el('li', '', x));
+      c.append(ul); two.append(c);
+    }
+    out.append(two);
+    const imp = el('div', 'card tr-block tr-imp'); imp.append(el('h3', '', T.imp_h), el('p', '', fb.improved_paragraph));
+    out.append(imp);
+    $('trResult').hidden = false;
+    $('trResult').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  }
+
+  $('trAgain').addEventListener('click', () => { $('trResult').hidden = true; text.focus(); window.scrollTo({ top: 0 }); });
+
+  $('trForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    msg.textContent = ''; msg.className = 'tr-msg';
+    if (text.value.trim().length < 200) { msg.textContent = T.err.too_short; msg.classList.add('bad'); return; }
+    submit.disabled = true; msg.textContent = T.checking;
+    try {
+      if (!API_URL) {
+        await new Promise(r => setTimeout(r, 900));
+        msg.textContent = '';
+        render(DEMO, true);
+        return;
+      }
+      const res = await fetch(API_URL + '/api/check', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topic: topic.value, text: text.value, lang: LANG }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) { msg.textContent = T.err[data.error] || T.err.default; msg.classList.add('bad'); return; }
+      msg.textContent = '';
+      const today = 'qrt-left-' + new Date().toISOString().slice(0, 10);
+      store.set(today, data.left);
+      $('trLeft').textContent = T.left.replace('{n}', data.left);
+      render(data.feedback, false);
+    } catch (err) {
+      msg.textContent = T.err.net; msg.classList.add('bad');
+    } finally {
+      submit.disabled = false;
+    }
+  });
+</script>
+<!-- Jivo онлайн-чат (qrt.kz-тегі виджет) -->
+<script>
+  // Jivo жүктелгенде ғана «Онлайн-чат» батырмасы көрінеді
+  function jivo_onLoadCallback() { document.documentElement.classList.add('jivo-ready'); }
+  document.querySelector('.chat-float').addEventListener('click', () => { if (window.jivo_api) jivo_api.open(); });
+</script>
+<script src="https://code.jivo.ru/widget/DGJ3e1A6Sx" async></script>
+</body>
+</html>
