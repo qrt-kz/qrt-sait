@@ -611,3 +611,9 @@ details .ans li{padding:2px 0}
 .tr-count{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .tr-sent{font-weight:700;color:var(--red)}
 .tr-sent.ok{color:var(--green)}
+
+/* Төлемді қайтару (FAQ) */
+details .ans ol{margin:6px 0 10px;padding-left:22px}
+details .ans ol li{padding:2px 0}
+#refund .btn{margin-top:4px}
+@media (min-width:961px){ .faq-col{gap:8px} }
