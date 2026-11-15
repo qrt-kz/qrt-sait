@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=33">
+<link rel="stylesheet" href="style.css?v=34">
 </head>
 <body>
 
@@ -133,10 +133,6 @@
   </div>
 </footer>
 
-<div class="float-btns">
-  <button type="button" class="chat-float">🗨️ Онлайн-чат</button>
-  <a class="wa-float" href="https://wa.me/77778024348">💬 WhatsApp</a>
-</div>
 
 <script>
   // Мәзір: ашу/жабу
@@ -284,12 +280,5 @@
     }
   });
 </script>
-<!-- Jivo онлайн-чат (qrt.kz-тегі виджет) -->
-<script>
-  // Jivo жүктелгенде ғана «Онлайн-чат» батырмасы көрінеді
-  function jivo_onLoadCallback() { document.documentElement.classList.add('jivo-ready'); }
-  document.querySelector('.chat-float').addEventListener('click', () => { if (window.jivo_api) jivo_api.open(); });
-</script>
-<script src="https://code.jivo.ru/widget/DGJ3e1A6Sx" async></script>
 </body>
 </html>
