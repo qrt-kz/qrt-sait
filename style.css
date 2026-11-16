@@ -605,3 +605,17 @@ details .ans ol li{padding:2px 0}
 @media (hover:hover) and (pointer:fine){ .menu a:not(.btn):not(.lang):hover{border-color:var(--blue);background:#f3f7fc} }
 @media (min-width:1241px){ .nav{gap:8px} .menu{gap:3px} .menu a{font-size:13.5px} .menu a:not(.btn):not(.lang){padding:4px 5px} .menu .btn{padding:8px 11px} }
 @media (max-width:1240px){ .menu a:not(.btn):not(.lang){padding:10px 14px} }
+
+/* ===== Тестілеуді өткізу ережелері (ereje.html / pravila.html) ===== */
+.doc{max-width:860px;font-size:17px;line-height:1.65}
+.doc h2{font-size:26px;margin:44px 0 14px}
+.doc h2:first-child{margin-top:0}
+.doc h3{font-size:19px;margin:26px 0 10px}
+.doc p{margin:0 0 12px}
+.doc ul{margin:0 0 14px;padding-left:22px}
+.doc li{padding:3px 0}
+.doc .terms{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:16px}
+.doc .terms td{border:1px solid var(--line);padding:8px 12px;vertical-align:top}
+.doc .terms td p{margin:0}
+.doc .terms tr:first-child td{font-weight:700;background:var(--blue-soft)}
+@media (max-width:600px){ .doc{font-size:16px} .doc h2{font-size:22px;margin-top:34px} .doc .terms td{padding:6px 8px} }
