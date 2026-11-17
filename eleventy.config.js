@@ -8,6 +8,7 @@ const fmt = (d, m) => `${String(d.getUTCDate()).padStart(2, "0")} ${m[d.getUTCMo
 module.exports = function (cfg) {
   cfg.addPassthroughCopy("assets");
   cfg.addPassthroughCopy("style.css");
+  cfg.addPassthroughCopy("_headers"); // Cloudflare Pages қорғаныс тақырыптары
   cfg.ignores.add("README.md");
   cfg.ignores.add(".github/**");
 
