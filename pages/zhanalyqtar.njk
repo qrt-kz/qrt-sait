@@ -1,0 +1,103 @@
+---
+permalink: zhanalyqtar.html
+lang: kz
+---
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Жаңалықтар — QAZAQ RESMI TEST</title>
+<meta name="description" content="QAZAQ RESMI TEST сертификатына қатысты соңғы жаңалықтар мен хабарландырулар.">
+<link rel="icon" href="assets/logo.png">
+<link rel="alternate" hreflang="ru" href="novosti.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=36">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo"><img src="assets/logo.png" alt="QAZAQ RESMI TEST" width="293" height="92"></a>
+    <button class="burger" aria-label="Мәзір" aria-expanded="false">☰</button>
+    <nav class="menu">
+      <a href="index.html#about">Тест туралы</a>
+      <a href="index.html#steps">Қалай тапсырамын?</a>
+      <a href="index.html#price">Бағасы</a>
+      <a href="nuskaulyk.html">Нұсқаулық</a>
+      <a href="zhuye.html">Жүйе туралы</a>
+      <a href="zhanalyqtar.html" class="active">Жаңалықтар</a>
+      <a href="index.html#faq">Сұрақ-жауап</a>
+      <a href="index.html#contact">Байланыс</a>
+      <a class="lang" href="novosti.html" hreflang="ru">RU</a>
+      <a class="btn btn-blue" href="https://test.qrt.kz/login">Кіру</a>
+      <a class="btn btn-blue" href="https://test.qrt.kz/register">Тіркелу</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero page-hero">
+  <div class="wrap">
+    <div class="hero-sub">Жаңалықтар</div>
+    <h1>Жаңалықтар</h1>
+    <p class="lead">QAZAQ RESMI TEST сертификатына қатысты соңғы жаңалықтар мен хабарландырулар.</p>
+  </div>
+</section>
+
+<section class="news-list">
+  <div class="wrap">
+{% for n in collections.news_kz %}
+    <article class="news-full" id="n{{ loop.index }}">
+      <a class="nf-img" href="{{ n.data.image }}" target="_blank"><img src="{{ n.data.image }}" alt=""{{ n.data.image | imgsize | safe }}></a>
+      <div class="nf-body">
+        <div class="date">📅 {{ n.date | kzdate }}</div>
+        <h2>{{ n.data.title }}</h2>
+{{ n.content | safe }}{% if n.data.links and n.data.links.length %}        <div class="chips">{% for l in n.data.links %}<a class="chip" href="{{ l.url }}" target="_blank" rel="noopener">🔗 {{ l.text }}</a>{% endfor %}</div>
+{% endif %}      </div>
+    </article>
+{% endfor %}
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 QAZAQ RESMI TEST<br>ISBN 978-601-287-226-2</div>
+    <div class="foot-links">
+      <a href="index.html">Басты бет</a>
+      <a href="zhuye.html">Жүйе туралы</a>
+      <a href="zhanalyqtar.html">Жаңалықтар</a>
+      <a href="https://test.qrt.kz/register">Тіркелу</a>
+      <a href="https://test.qrt.kz/login">Кіру</a>
+      <a href="https://certificate.qrt.kz/certificate">Сертификат</a>
+      <a href="ereje.html">Тестілеуді өткізу ережелері (жария оферта)</a>
+      <a href="index.html#refund">Төлемді қайтару</a>
+      <a href="novosti.html" hreflang="ru">Русский</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Мәзір: ашу/жабу
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  menu.addEventListener('click', e => {
+    if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); }
+  });
+</script>
+<script>
+  // Фотолар жүктелген соң сілтемедегі жаңалыққа қайта апару
+  window.addEventListener('load', () => {
+    const t = location.hash && document.querySelector(location.hash);
+    if (t) t.scrollIntoView();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+{
+  "kz": [
+    {
+      "text": "Қазақстан Республикасының мемлекеттік қызметшілері",
+      "logo": "assets/partners/gerb.jpg",
+      "url": "https://adilet.zan.kz/rus/docs/V2400034713"
+    },
+    {
+      "text": "Президенттік жастар кадр резервіне үміткерлер",
+      "logo": "assets/partners/rezerv.jpg",
+      "url": "https://pkrezerv.gov.kz/"
+    },
+    {
+      "text": "«Болашақ» халықаралық бағдарламасының үміткерлері",
+      "logo": "assets/partners/bolashak.jpg",
+      "url": "https://bolashak.gov.kz/kz"
+    },
+    {
+      "text": "ҚР Оқу-ағарту министрлігі (мемлекеттік білім беру ұйымдарының бірінші басшы лауазымына кандидаттар)",
+      "logo": "assets/partners/oqu-agartu.jpg",
+      "url": "https://www.gov.kz/memleket/entities/edu?lang=kk"
+    },
+    {
+      "text": "ҚР Қаржы нарығын реттеу және дамыту агенттігі қызметкерлері",
+      "logo": "assets/partners/gerb.jpg",
+      "url": "https://www.gov.kz/memleket/entities/afm?lang=kk"
+    },
+    {
+      "text": "ҚР Ішкі істер министрлігінің басшы лауазымды қызметкерлері (Президенттік резерв)",
+      "logo": "assets/partners/iim.jpg",
+      "url": "https://www.gov.kz/memleket/entities/qriim?lang=kk"
+    },
+    {
+      "text": "Назарбаев зияткерлік мектебінің қызметкерлері",
+      "logo": "assets/partners/nis.jpg",
+      "url": "https://nis.edu.kz/kk/"
+    },
+    {
+      "text": "Мемлекеттік басқару академиясының магистратура, докторантура бағдарламаларына түсетін үміткерлер",
+      "logo": "assets/partners/apa.jpg",
+      "url": "https://www.apa.kz/"
+    },
+    {
+      "text": "Maqsut Narikbayev University-ге түсуші үміткерлер",
+      "logo": "assets/partners/mnu.jpg",
+      "url": "https://mnu.kz/ru/"
+    },
+    {
+      "text": "ҚР Қорғаныс министрлігі (ҚР Қарулы Күштерінің әскери қызметшілері)",
+      "logo": "assets/partners/qorganys.png",
+      "url": "https://adilet.zan.kz/kaz/docs/G26B0000959"
+    },
+    {
+      "text": "Қазақ тілін ресми-іскерлік деңгейде меңгеруді мақсат ететін жеке тұлғалар",
+      "logo": "assets/partners/adamdar.png",
+      "url": ""
+    }
+  ],
+  "ru": [
+    {
+      "text": "Государственные служащие Республики Казахстан",
+      "logo": "assets/partners/gerb.jpg",
+      "url": "https://adilet.zan.kz/rus/docs/V2400034713"
+    },
+    {
+      "text": "Кандидаты в Президентский молодёжный кадровый резерв",
+      "logo": "assets/partners/rezerv.jpg",
+      "url": "https://pkrezerv.gov.kz/"
+    },
+    {
+      "text": "Кандидаты международной программы «Болашак»",
+      "logo": "assets/partners/bolashak.jpg",
+      "url": "https://bolashak.gov.kz/ru"
+    },
+    {
+      "text": "Министерство просвещения РК (кандидаты на должность первого руководителя государственной организации образования)",
+      "logo": "assets/partners/oqu-agartu.jpg",
+      "url": "https://www.gov.kz/memleket/entities/edu?lang=ru"
+    },
+    {
+      "text": "Сотрудники Агентства РК по регулированию и развитию финансового рынка",
+      "logo": "assets/partners/gerb.jpg",
+      "url": "https://www.gov.kz/memleket/entities/afm?lang=ru"
+    },
+    {
+      "text": "Сотрудники органов внутренних дел РК",
+      "logo": "assets/partners/iim.jpg",
+      "url": "https://www.gov.kz/memleket/entities/qriim?lang=ru"
+    },
+    {
+      "text": "Сотрудники Назарбаев Интеллектуальных школ",
+      "logo": "assets/partners/nis.jpg",
+      "url": "https://nis.edu.kz/ru/"
+    },
+    {
+      "text": "Кандидаты, поступающие в магистратуру и докторантуру Академии государственного управления",
+      "logo": "assets/partners/apa.jpg",
+      "url": "https://www.apa.kz/ru/"
+    },
+    {
+      "text": "Поступающие в Maqsut Narikbayev University",
+      "logo": "assets/partners/mnu.jpg",
+      "url": "https://mnu.kz/ru/"
+    },
+    {
+      "text": "Министерство обороны РК (военнослужащие Вооружённых Сил РК)",
+      "logo": "assets/partners/qorganys.png",
+      "url": "https://adilet.zan.kz/rus/docs/V2600039674"
+    },
+    {
+      "text": "Физические лица, желающие владеть казахским языком на официально-деловом уровне",
+      "logo": "assets/partners/adamdar.png",
+      "url": ""
+    }
+  ]
+}

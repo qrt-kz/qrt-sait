@@ -1,8 +1,11 @@
+---
+permalink: index.html
+lang: kz
+---
 <!doctype html>
 <html lang="kk">
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#ffffff">
 <title>QAZAQ RESMI TEST — қазақ тілін меңгеру деңгейін анықтау</title>
@@ -40,9 +43,9 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="hero-sub">QAZAQ RESMI TEST жүйесінің ресми сайты</div>
-      <h1>Қазақ тілін меңгеру деңгейін анықтаудың онлайн-сервисі</h1>
-      <p class="lead">Тестті кез келген жерде, өзіңізге ыңғайлы уақытта тапсырып, сертификат аласыз. Ең бастысы — тыныш ортада тапсыру.</p>
+      <div class="hero-sub">{{ hero.kz.sub }}</div>
+      <h1>{{ hero.kz.title }}</h1>
+      <p class="lead">{{ hero.kz.lead }}</p>
       <div class="hero-btns">
         <a class="btn btn-main" href="https://test.qrt.kz/register">Тестке тіркелу →</a>
         <a class="btn btn-line" href="#steps">Қалай тапсырылады?</a>
@@ -163,12 +166,9 @@
     <h2>Деңгейлер және сертификат мерзімі</h2>
     <p class="lead">Жинаған пайызыңызға қарай деңгей беріледі.</p>
     <div class="grid g3 mt">
-      <div class="lvl a1"><div class="code">A1</div><div class="name">Қарапайым деңгей</div><div class="desc">Қарапайым сөздер, жай сөйлемдер құрастыру. Сұхбатта қарапайым сөз тіркестерін қолдану.</div><ul><li><span>Нәтиже</span><b>10–25%</b></li><li><span>Сертификат</span><b>2 жыл</b></li></ul></div>
-      <div class="lvl a2"><div class="code">A2</div><div class="name">Базалық деңгей</div><div class="desc">Жай сөйлемдермен қарапайым мәтін құрастыру. Өз пікірін жай сөйлемдермен жеткізу.</div><ul><li><span>Нәтиже</span><b>26–50%</b></li><li><span>Сертификат</span><b>2 жыл</b></li></ul></div>
-      <div class="lvl b1"><div class="code">B1</div><div class="name">Орта деңгей</div><div class="desc">Тақырыптың маңызын аша отырып мәтін құрастыру. Пікірін дәлелдеп жеткізу.</div><ul><li><span>Нәтиже</span><b>51–65%</b></li><li><span>Сертификат</span><b>2 жыл</b></li></ul></div>
-      <div class="lvl b2"><div class="code">B2</div><div class="name">Ортадан жоғары деңгей</div><div class="desc">Нақты мысалдар келтіре отырып, дәлелді мәтін құрастыру.</div><ul><li><span>Нәтиже</span><b>66–80%</b></li><li><span>Сертификат</span><b>3 жыл</b></li></ul></div>
-      <div class="lvl c1"><div class="code">C1</div><div class="name">Жоғары деңгей</div><div class="desc">Талдау мәтіндерін жазу. Аудитория алдында баяндама жасап, күрделі сұрақтарға жауап беру.</div><ul><li><span>Нәтиже</span><b>81–90%</b></li><li><span>Сертификат</span><b>3 жыл</b></li></ul></div>
-      <div class="lvl c2"><div class="code">C2</div><div class="name">Жетік деңгей</div><div class="desc">Кәсіби терминдер мен әдеби тіл нормаларын сақтап баяндама жазу, шешен сөйлеу.</div><ul><li><span>Нәтиже</span><b>91–100%</b></li><li><span>Сертификат</span><b>мерзімсіз</b></li></ul></div>
+{% for l in levels.kz %}
+      <div class="lvl {{ l.code | lower }}"><div class="code">{{ l.code }}</div><div class="name">{{ l.name }}</div><div class="desc">{{ l.desc }}</div><ul><li><span>{{ levels.labels_kz.result }}</span><b>{{ l.result }}</b></li><li><span>{{ levels.labels_kz.term }}</span><b>{{ l.term }}</b></li></ul></div>
+{% endfor %}
     </div>
     <p class="mt"><a class="btn btn-blue" href="https://certificate.qrt.kz/certificate">Сертификатты тексеру →</a></p>
   </div>
@@ -180,17 +180,7 @@
     <h2>Сертификат кімге керек?</h2>
     <p class="lead">Жүйені мына ұйымдар мен үміткерлер қолданады:</p>
     <div class="orgs mt">
-      <a class="org" href="https://adilet.zan.kz/rus/docs/V2400034713" target="_blank" rel="noopener"><img src="assets/partners/gerb.jpg" alt="" width="64" height="64"><span>Қазақстан Республикасының мемлекеттік қызметшілері</span><i aria-hidden="true">↗</i></a>
-      <a class="org" href="https://pkrezerv.gov.kz/" target="_blank" rel="noopener"><img src="assets/partners/rezerv.jpg" alt="" width="64" height="64"><span>Президенттік жастар кадр резервіне үміткерлер</span><i aria-hidden="true">↗</i></a>
-      <a class="org" href="https://bolashak.gov.kz/kz" target="_blank" rel="noopener"><img src="assets/partners/bolashak.jpg" alt="" width="64" height="64"><span>«Болашақ» халықаралық бағдарламасының үміткерлері</span><i aria-hidden="true">↗</i></a>
-      <a class="org" href="https://www.gov.kz/memleket/entities/edu?lang=kk" target="_blank" rel="noopener"><img src="assets/partners/oqu-agartu.jpg" alt="" width="64" height="64"><span>ҚР Оқу-ағарту министрлігі (мемлекеттік білім беру ұйымдарының бірінші басшы лауазымына кандидаттар)</span><i aria-hidden="true">↗</i></a>
-      <a class="org" href="https://www.gov.kz/memleket/entities/afm?lang=kk" target="_blank" rel="noopener"><img src="assets/partners/gerb.jpg" alt="" width="64" height="64"><span>ҚР Қаржы нарығын реттеу және дамыту агенттігі қызметкерлері</span><i aria-hidden="true">↗</i></a>
-      <a class="org" href="https://www.gov.kz/memleket/entities/qriim?lang=kk" target="_blank" rel="noopener"><img src="assets/partners/iim.jpg" alt="" width="64" height="64"><span>ҚР Ішкі істер министрлігінің басшы лауазымды қызметкерлері (Президенттік резерв)</span><i aria-hidden="true">↗</i></a>
-      <a class="org" href="https://nis.edu.kz/kk/" target="_blank" rel="noopener"><img src="assets/partners/nis.jpg" alt="" width="64" height="64"><span>Назарбаев зияткерлік мектебінің қызметкерлері</span><i aria-hidden="true">↗</i></a>
-      <a class="org" href="https://www.apa.kz/" target="_blank" rel="noopener"><img src="assets/partners/apa.jpg" alt="" width="64" height="64"><span>Мемлекеттік басқару академиясының магистратура, докторантура бағдарламаларына түсетін үміткерлер</span><i aria-hidden="true">↗</i></a>
-      <a class="org" href="https://mnu.kz/ru/" target="_blank" rel="noopener"><img src="assets/partners/mnu.jpg" alt="" width="64" height="64"><span>Maqsut Narikbayev University-ге түсуші үміткерлер</span><i aria-hidden="true">↗</i></a>
-      <a class="org" href="https://adilet.zan.kz/kaz/docs/G26B0000959" target="_blank" rel="noopener"><img src="assets/partners/qorganys.png" alt="" width="64" height="64"><span>ҚР Қорғаныс министрлігі (ҚР Қарулы Күштерінің әскери қызметшілері)</span><i aria-hidden="true">↗</i></a>
-      <div class="org"><img src="assets/partners/adamdar.png" alt="" width="64" height="64"><span>Қазақ тілін ресми-іскерлік деңгейде меңгеруді мақсат ететін жеке тұлғалар</span></div>
+{% include "orgs.njk" %}
     </div>
     <p class="mt"><a class="btn btn-blue" href="zhuye.html#users">Барлық қолданушылар мен құжаттар →</a></p>
   </div>
@@ -204,23 +194,19 @@
     <div class="tariffs mt">
       <div class="tariff">
         <div class="t-name">Стандарт</div>
-        <div class="price">18 700 ₸</div>
+        <div class="price">{{ tariffs.standard_price }}</div>
         <ul class="checks">
-          <li>5 бөліктің барлығы</li>
-          <li>Кез келген жерде, кез келген уақытта</li>
-          <li>Нәтиже 2 жұмыс күні ішінде</li>
-          <li>Сертификат жеке кабинетте</li>
-        </ul>
+{% for i in tariffs.kz.standard %}          <li>{{ i }}</li>
+{% endfor %}        </ul>
         <a class="btn btn-blue" href="https://test.qrt.kz/register">Тіркелу →</a>
       </div>
       <div class="tariff hot">
-        <div class="badge">⚡ Нәтижелерді бір күнде алу</div>
+        <div class="badge">{{ tariffs.kz.badge }}</div>
         <div class="t-name">Экспресс</div>
-        <div class="price">21 700 ₸</div>
+        <div class="price">{{ tariffs.express_price }}</div>
         <ul class="checks">
-          <li>Стандарттағының бәрі</li>
-          <li>Нәтиже бір күнде шығады</li>
-        </ul>
+{% for i in tariffs.kz.express %}          <li>{{ i }}</li>
+{% endfor %}        </ul>
         <a class="btn btn-main" href="https://test.qrt.kz/register">Тіркелу →</a>
       </div>
     </div>
@@ -252,7 +238,7 @@
       <div class="card">
         <div class="ico">👩‍🏫</div><h3>Дайындық курстары</h3>
         <p>QAZAQ RESMI TEST-ке тек ҚР Президенті жанындағы Мемлекеттік басқару академиясы дайындайды. Ақылы 24 және 36 сағаттық курстар бар, жеке немесе топпен.</p>
-        <p>Телефон: <a href="tel:+77172753270"><b>8 (7172) 75-32-70</b></a></p>
+        <p>Телефон: <a href="tel:{{ settings.phone_tel }}"><b>{{ settings.phone }}</b></a></p>
       </div>
     </div>
   </div>
@@ -264,21 +250,14 @@
     <h2>Жиі қойылатын сұрақтар</h2>
     <div class="mt">
       <div class="faq-col">
-        <details><summary>QAZAQ RESMI TEST дегеніміз не?</summary><div class="ans"><p>QAZAQ RESMI TEST – қазақ тілін меңгеру деңгейін анықтаудың онлайн жүйесі.</p></div></details>
-        <details><summary>QAZAQ RESMI TEST қалай жүргізіледі?</summary><div class="ans"><p>Тест онлайн режимінде жүргізіледі. Тест тапсырушы жүйеге тіркеліп, төлемақы төлейді, сонан кейін тест жүйесіне өтеді. Тест бөліктерін өзіне ыңғайлы кез келген уақытта өте алады. Жүйе үздіксіз (7/24) жұмыс жасайды.</p></div></details>
-        <details><summary>Тест тапсыру бағасы қанша?</summary><div class="ans"><p>QAZAQ RESMI TEST тапсыру құны – <b>18 700 (он сегіз мың жеті жүз) теңге</b>.</p></div></details>
-        <details><summary>Заңды мекеме өз қызметкерлеріне тест тапсыруды ұйымдастыра ала ма?</summary><div class="ans"><p>Ол үшін <a href="mailto:info@qrt.kz">info@qrt.kz</a> поштасына мекеме реквизиттерін, қызметкерлер санын көрсетіп, өтінім жіберу қажет. Барлық бухгалтерлік құжаттар, соның ішінде, төлемақы есепшоты электронды поштаға жіберіледі. Төлемақы расталғаннан кейін мекеме қызметкерлері өздеріне ыңғайлы уақытта тест тапсырып, сертификаттарын электронды пошта арқылы алады.</p></div></details>
-        <details><summary>Қазақ ресми тест деңгейлерінің пайыздық көрсеткіштері қандай?</summary><div class="ans"><p><b>Деңгейлік кесте</b></p><ul><li>А1 – қарапайым деңгей: 10%–25%</li><li>А2 – базалық деңгей: 26%–50%</li><li>В1 – орта деңгей: 51%–65%</li><li>В2 – ортадан жоғары деңгей: 66%–80%</li><li>С1 – жоғары деңгей: 81%–90%</li><li>С2 – жетік деңгей: 91%–100%</li></ul></div></details>
-        <details><summary>QAZAQ RESMI TEST жүйесінің құрылымы қандай?</summary><div class="ans"><p>QAZAQ RESMI TEST 5 бөліктен тұрады, бөліктерді ұсынылған кезекпен орындай аласыз. Бір кіргенде барлық бөліктерді орындау <b>МАҢЫЗДЫ</b>.</p><ul><li>Тыңдалым – 10%</li><li>Лексика-орфография – 10%</li><li>Оқылым – 10%</li><li>Жазылым – 35%</li><li>Сұхбат – 35%</li></ul><ul><li><b>Тыңдалым</b> – тест тапсырушы бір бейне мәтінді тыңдап, 5 тест сұрағына жауап береді, берілген уақыт – 10 минут.</li><li><b>Лексика-орфография</b> – сөздің мәні мен орфографиялық нормалар бойынша 10 тест орындайды, берілген уақыт – 10 минут.</li><li><b>Оқылым</b> – тест тапсырушы мәтінді оқып, 10 тест орындайды, берілген уақыт – 15 минут.</li><li><b>Жазылым</b> – берілген тақырыпқа ресми-іскерлік стильде аргументті мәтін құрастырады, берілген уақыт – 15 минут.</li><li><b>Сұхбат</b> – нақыл сөз бойынша құрастырылған 3 сұраққа жауап береді, берілген уақыт – 10 минут.</li></ul></div></details>
-        <details id="refund"><summary>Төленген ақшаны қайтаруға бола ма?</summary><div class="ans"><p><b>Қайтарылады:</b> сайттың техникалық қатесінен тест аяқталмаса, үміткерге тестті қайта тапсыруға промокод (3 күн жарамды) немесе төленген ақшаны қайтару ұсынылады.</p><p><b>Қайтарылмайды:</b></p><ul><li>нәтиже үміткердің өз бастамасымен немесе ереже бұзғаны үшін жойылса;</li><li>қызмет көрсетіліп қойса (проктор мен сарапшылар тексерсе);</li><li>төлем жасалып, тест 1 ай ішінде тапсырылмаса.</li></ul><p><b>Қалай сұрауға болады:</b></p><ol><li><a href="assets/docs/qrt-qaytaru-otinish.docx" download>Өтініш үлгісін жүктеп алыңыз</a> (Word). <a href="assets/docs/qrt-vozvrat-zayavlenie.docx" download>Орысша нұсқасы</a>.</li><li>Өтінішті толтырып, қол қойыңыз.</li><li>Қосыңыз: төлем чегі немесе Kaspi QR скриншоты, жеке куәлік көшірмесі.</li><li>Барлығын <a href="mailto:info@qrt.kz?subject=Төлемді қайтару">info@qrt.kz</a> поштасына жіберіңіз. Хаттың тақырыбына «Төлемді қайтару» деп жазыңыз.</li></ol><p>Ақша өтініш түскен күннен бастап <b>15 күн ішінде</b> қайтарылады.</p><p><a class="btn btn-blue" href="assets/docs/qrt-qaytaru-otinish.docx" download>📄 Өтініш үлгісін жүктеу</a></p></div></details>
+{% for f in faq.kz_left %}
+        <details{% if f.id %} id="{{ f.id }}"{% endif %}><summary>{{ f.q | safe }}</summary><div class="ans">{{ f.a | safe }}</div></details>
+{% endfor %}
       </div>
       <div class="faq-col">
-        <details><summary>Тестілеуден бірден өту керек пе әлде шығып сонан кейін қайта кіруге бола ма?</summary><div class="ans"><p>QAZAQ RESMI TEST 5 бөліктен тұрады, ұсынылған кезегімен орындайсыз. Барлық бөліктерді орындау <b>МАҢЫЗДЫ</b>, бір ретте барлық 5 бөлікті орындау керек.</p></div></details>
-        <details><summary>QAZAQ RESMI TEST тапсыруға қайда дайындалуға болады?</summary><div class="ans"><p>QAZAQ RESMI TEST-ке тек қана Қазақстан Республикасы Президентінің жанындағы Мемлекеттік басқару академиясы дайындайды. Оқу орнында ақылы 24, 36 сағаттық QAZAQ RESMI TEST-ке дайындық курстары жүргізіледі. Оқыту түрі жекелеме, топтық. Байланыс телефоны: <a href="tel:+77172753270">8 (7172) 75-32-70</a></p></div></details>
-        <details><summary>Тест нәтижесі қанша уақытта дайын болады?</summary><div class="ans"><p>Барлық бөлік бойынша тест нәтижесі 2 жұмыс күні ішінде шығады. Тілдік деңгейді анықтау сертификаты жеке кабинетіңізге жіберіледі.</p></div></details>
-        <details><summary>Сертификатты қайдан алуға болады?</summary><div class="ans"><p>Жеке кабинетіңізге нәтижелермен бірге сертификат та жіберіледі. Сіз оны өзіңіздің қалаған уақытыңызда ала аласыз.</p></div></details>
-        <details><summary>QAZAQ RESMI TEST-ті қанша рет тапсыруға болады?</summary><div class="ans"><p>QAZAQ RESMI TEST-ті қалауыңызша бірнеше рет тапсыра беруге болады.</p></div></details>
-        <details><summary>Сертификат қанша мерзімге жарамды?</summary><div class="ans"><p>Сертификаттың жарамдылығы тест нәтижелері мен деңгейге байланысты.</p><ul><li>А1 – қарапайым деңгей: 2 жыл</li><li>А2 – базалық деңгей: 2 жыл</li><li>В1 – орта деңгей: 2 жыл</li><li>В2 – ортадан жоғары деңгей: 3 жыл</li><li>С1 – жоғары деңгей: 3 жыл</li><li>С2 – жетік деңгей: мерзімсіз</li></ul></div></details>
+{% for f in faq.kz_right %}
+        <details{% if f.id %} id="{{ f.id }}"{% endif %}><summary>{{ f.q | safe }}</summary><div class="ans">{{ f.a | safe }}</div></details>
+{% endfor %}
       </div>
     </div>
   </div>
@@ -289,18 +268,12 @@
   <div class="wrap">
     <h2>Жаңалықтар</h2>
     <div class="news-grid mt">
-      <a class="news-card" href="zhanalyqtar.html#n1">
-        <img src="assets/news/bolashak-2026-07.jpg" alt="" width="1320" height="1495">
-        <div class="nc-body"><div class="date">24 шілде 2026</div><h3>«Болашақ» стипендиясына құжаттарды қабылдау 16 қазанға дейін жүргізіледі</h3><span class="more">Толығырақ →</span></div>
+{% for n in collections.news_kz | head(3) %}
+      <a class="news-card" href="zhanalyqtar.html#n{{ loop.index }}">
+        <img src="{{ n.data.image }}" alt=""{{ n.data.image | imgsize | safe }}>
+        <div class="nc-body"><div class="date">{{ n.date | kzdate }}</div><h3>{{ n.data.title }}</h3><span class="more">{{ "Толығырақ" if "kz" == "kz" else "Подробнее" }} →</span></div>
       </a>
-      <a class="news-card" href="zhanalyqtar.html#n2">
-        <img src="assets/news/mnu-2026-07.jpg" alt="" width="1024" height="1536">
-        <div class="nc-body"><div class="date">03 шілде 2026</div><h3>Maqsut Narikbayev University енді QAZAQ RESMI TEST сертификатын қабылдайды</h3><span class="more">Толығырақ →</span></div>
-      </a>
-      <a class="news-card" href="zhanalyqtar.html#n3">
-        <img src="assets/news/apa-2026-04.jpg" alt="" width="1200" height="799">
-        <div class="nc-body"><div class="date">20 сәуір 2026</div><h3>Мемлекеттік басқару академиясына оқуға құжат қабылдау басталды</h3><span class="more">Толығырақ →</span></div>
-      </a>
+{% endfor %}
     </div>
     <p class="mt"><a class="btn btn-blue" href="zhanalyqtar.html">Барлық жаңалықтар →</a></p>
   </div>
@@ -312,12 +285,12 @@
     <h2>Байланыс</h2>
     <p class="lead">Сұрағыңыз болса, жазыңыз — көмектесеміз.</p>
     <div class="grid g4 mt">
-      <div class="card card-link"><div class="ico">📞</div><h3>Телефон</h3><a href="tel:+77172753270">8 (7172) 75-32-70</a></div>
-      <div class="card card-link"><div class="ico">💬</div><h3>WhatsApp</h3><a href="https://wa.me/77778024348">+7 777 802 4348</a></div>
-      <div class="card card-link"><div class="ico">✉️</div><h3>Пошта</h3><a href="mailto:info@qrt.kz">info@qrt.kz</a></div>
-      <div class="card card-link"><div class="ico">📷</div><h3>Instagram</h3><a href="https://www.instagram.com/qrt.kz/">@qrt.kz</a></div>
+      <div class="card card-link"><div class="ico">📞</div><h3>Телефон</h3><a href="tel:{{ settings.phone_tel }}">{{ settings.phone }}</a></div>
+      <div class="card card-link"><div class="ico">💬</div><h3>WhatsApp</h3><a href="https://wa.me/{{ settings.whatsapp | digits }}">{{ settings.whatsapp }}</a></div>
+      <div class="card card-link"><div class="ico">✉️</div><h3>Пошта</h3><a href="mailto:{{ settings.email }}">{{ settings.email }}</a></div>
+      <div class="card card-link"><div class="ico">📷</div><h3>Instagram</h3><a href="https://www.instagram.com/{{ settings.instagram }}/">@{{ settings.instagram }}</a></div>
     </div>
-    <p class="mt">📍 Қазақстан Республикасы, 010000, Астана қ.</p>
+    <p class="mt">📍 {{ settings.address_kz }}</p>
   </div>
 </section>
 

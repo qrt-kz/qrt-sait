@@ -1,0 +1,141 @@
+---
+permalink: sistema.html
+lang: ru
+---
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>О системе — QAZAQ RESMI TEST</title>
+<meta name="description" content="Как работает система, кто её использует и на каких документах она основана — всё на одной странице.">
+<link rel="icon" href="assets/logo.png">
+<link rel="alternate" hreflang="kk" href="zhuye.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=36">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="ru.html" class="logo"><img src="assets/logo.png" alt="QAZAQ RESMI TEST" width="293" height="92"></a>
+    <button class="burger" aria-label="Меню" aria-expanded="false">☰</button>
+    <nav class="menu">
+      <a href="ru.html#about">О тесте</a>
+      <a href="ru.html#steps">Как сдать?</a>
+      <a href="ru.html#price">Стоимость</a>
+      <a href="instrukciya.html">Инструкция</a>
+      <a href="sistema.html" class="active">О системе</a>
+      <a href="novosti.html">Новости</a>
+      <a href="ru.html#faq">Вопрос-ответ</a>
+      <a href="ru.html#contact">Контакты</a>
+      <a class="lang" href="zhuye.html" hreflang="kk">KZ</a>
+      <a class="btn btn-blue" href="https://test.qrt.kz/login">Войти</a>
+      <a class="btn btn-blue" href="https://test.qrt.kz/register">Регистрация</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero page-hero">
+  <div class="wrap">
+    <div class="hero-sub">О системе</div>
+    <h1>Онлайн-система QAZAQ RESMI TEST</h1>
+    <p class="lead">Как работает система, кто её использует и на каких документах она основана — всё на одной странице.</p>
+  </div>
+</section>
+<nav class="subnav">
+  <div class="wrap">
+      <a href="#system">⚙️ О системе</a>
+      <a href="#users">🏛️ Пользователи системы</a>
+      <a href="#acts">📜 Нормативные правовые акты</a>
+  </div>
+</nav>
+
+<section id="system">
+  <div class="wrap">
+    <h2>Как работает система?</h2>
+    <div class="grid g4 mt">
+      <div class="card"><div class="ico">🧩</div><h3>Онлайн-система</h3><p>QAZAQ RESMI TEST состоит из 5 частей. Тест сдаётся онлайн из любого места.</p></div>
+      <div class="card"><div class="ico">📜</div><h3>Результат за 2 рабочих дня</h3><p>Результаты по всем разделам доступны в течение 2 рабочих дней. Сертификат об определении языкового уровня направляется в личный кабинет.</p></div>
+      <div class="card"><div class="ico">🎥</div><h3>Прокторинг (контроль)</h3><p>Система отслеживает действия кандидата и не позволяет использовать другие программы, окна или вкладки. Ведётся аудио- и видеонаблюдение. При нарушениях результаты автоматически аннулируются.</p></div>
+      <div class="card"><div class="ico">🔐</div><h3>Модуль шифрования</h3><p>Оценивание объективно: независимые эксперты проверяют обезличенные работы, зашифрованные по международному стандарту UUID. Эксперт видит только 32-символьный код.</p></div>
+    </div>
+    <div class="uuid"><span>Пример UUID-шифрования:</span> <code>123e4567-e89b-12d3-a456-426655449200</code></div>
+  </div>
+</section>
+
+<section id="users" class="alt">
+  <div class="wrap">
+    <h2>Пользователи системы</h2>
+    <p class="lead">Сертификат QAZAQ RESMI TEST принимают следующие организации и программы. Нажмите на карточку, чтобы перейти на сайт организации.</p>
+    <div class="orgs mt">
+{% include "orgs.njk" %}
+    </div>
+  </div>
+</section>
+
+<section id="acts">
+  <div class="wrap">
+    <h2>Нормативные правовые акты</h2>
+    <p class="lead">Официальные документы, в которых требуется сертификат QAZAQ RESMI TEST. Нажмите кнопку, чтобы открыть документ.</p>
+    <div class="act-tabs" role="tablist">{% for g in acts.ru %}<button type="button" role="tab" aria-selected="{{ "true" if loop.first else "false" }}" data-i="{{ loop.index0 }}">{{ g.icon }} {{ g.title }}</button>{% endfor %}</div>
+    <div class="acts mt">
+{% for g in acts.ru %}
+      <div class="act-group">
+        <h3><span aria-hidden="true">{{ g.icon }}</span> {{ g.title }}</h3>
+{% for a in g.acts %}        <div class="act">
+          <div class="act-ico" aria-hidden="true">📄</div>
+          <div><h4>{{ a.title }}</h4><p>{{ a.desc }}</p><small>{{ a.source }}</small></div>
+          <a class="btn btn-line-blue" href="{{ a.url }}" target="_blank" rel="noopener">{{ acts.button_ru }}</a>
+        </div>
+{% endfor %}      </div>
+{% endfor %}
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 QAZAQ RESMI TEST<br>ISBN 978-601-287-226-2</div>
+    <div class="foot-links">
+      <a href="ru.html">Главная</a>
+      <a href="sistema.html">О системе</a>
+      <a href="novosti.html">Новости</a>
+      <a href="https://test.qrt.kz/register">Регистрация</a>
+      <a href="https://test.qrt.kz/login">Войти</a>
+      <a href="https://certificate.qrt.kz/certificate">Сертификат</a>
+      <a href="pravila.html">Правила проведения тестирования (публичная оферта)</a>
+      <a href="ru.html#refund">Возврат оплаты</a>
+      <a href="zhuye.html" hreflang="kk">Қазақша</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Мәзір: ашу/жабу
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  menu.addEventListener('click', e => {
+    if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); }
+  });
+
+  // Актілер санаттары: басқанда тек сол санат көрінеді
+  const tabs = document.querySelectorAll('.act-tabs button');
+  const groups = document.querySelectorAll('.act-group');
+  const show = i => {
+    tabs.forEach((b, j) => b.setAttribute('aria-selected', i === j));
+    groups.forEach((g, j) => g.hidden = i !== j);
+  };
+  tabs.forEach((b, i) => b.addEventListener('click', () => show(i)));
+  show(0);
+</script>
+</body>
+</html>

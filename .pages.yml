@@ -1,0 +1,502 @@
+# Басқару панелі (Pages CMS): app.pagescms.org → GitHub арқылы кіру → qrt-kz/qrt-sait
+media:
+  input: assets/uploads
+  output: assets/uploads
+settings:
+  commit:
+    templates:
+      create: 'Панель: {path} қосылды'
+      update: 'Панель: {path} өзгертілді'
+      delete: 'Панель: {path} өшірілді'
+content:
+  - name: news_kz
+    label: Жаңалықтар (қазақша)
+    type: collection
+    path: news/kz
+    filename: '{year}-{month}-{day}-{primary}.md'
+    view:
+      fields:
+        - title
+        - date
+      primary: title
+      sort:
+        - date
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Тақырыбы
+        type: string
+        required: true
+      - name: date
+        label: Күні
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: image
+        label: Суреті
+        type: image
+        required: true
+      - name: links
+        label: Сілтемелер (батырмалар)
+        type: object
+        list: true
+        fields:
+          - name: text
+            label: Жазуы
+            type: string
+          - name: url
+            label: Сілтеме (https://...)
+            type: string
+      - name: body
+        label: Мәтіні
+        type: rich-text
+        options:
+          format: html
+  - name: news_ru
+    label: Новости (орысша)
+    type: collection
+    path: news/ru
+    filename: '{year}-{month}-{day}-{primary}.md'
+    view:
+      fields:
+        - title
+        - date
+      primary: title
+      sort:
+        - date
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Тақырыбы
+        type: string
+        required: true
+      - name: date
+        label: Күні
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: image
+        label: Суреті
+        type: image
+        required: true
+      - name: links
+        label: Сілтемелер (батырмалар)
+        type: object
+        list: true
+        fields:
+          - name: text
+            label: Жазуы
+            type: string
+          - name: url
+            label: Сілтеме (https://...)
+            type: string
+      - name: body
+        label: Мәтіні
+        type: rich-text
+        options:
+          format: html
+  - name: tariffs
+    label: Баға мен тарифтер
+    type: file
+    path: _data/tariffs.json
+    format: json
+    fields:
+      - name: standard_price
+        label: '«Стандарт» бағасы (мысалы: 18 700 ₸)'
+        type: string
+      - name: express_price
+        label: «Экспресс» бағасы
+        type: string
+      - name: kz
+        label: Қазақша мәтін
+        type: object
+        fields:
+          - name: standard
+            label: «Стандарт» не кіреді
+            type: string
+            list: true
+          - name: express
+            label: «Экспресс» не кіреді
+            type: string
+            list: true
+          - name: badge
+            label: «Экспресс» белгісі
+            type: string
+      - name: ru
+        label: Орысша мәтін
+        type: object
+        fields:
+          - name: standard
+            label: «Стандарт» не кіреді
+            type: string
+            list: true
+          - name: express
+            label: «Экспресс» не кіреді
+            type: string
+            list: true
+          - name: badge
+            label: «Экспресс» белгісі
+            type: string
+  - name: faq
+    label: Сұрақ-жауап
+    type: file
+    path: _data/faq.json
+    format: json
+    fields:
+      - name: kz_left
+        label: Қазақша — сол баған
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.q}'
+        fields:
+          - name: q
+            label: Сұрақ
+            type: string
+          - name: a
+            label: Жауап
+            type: rich-text
+            options:
+              format: html
+          - name: id
+            label: Белгі (өзгертпеңіз)
+            type: string
+            hidden: true
+      - name: kz_right
+        label: Қазақша — оң баған
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.q}'
+        fields:
+          - name: q
+            label: Сұрақ
+            type: string
+          - name: a
+            label: Жауап
+            type: rich-text
+            options:
+              format: html
+          - name: id
+            label: Белгі (өзгертпеңіз)
+            type: string
+            hidden: true
+      - name: ru_left
+        label: Орысша — сол баған
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.q}'
+        fields:
+          - name: q
+            label: Сұрақ
+            type: string
+          - name: a
+            label: Жауап
+            type: rich-text
+            options:
+              format: html
+          - name: id
+            label: Белгі (өзгертпеңіз)
+            type: string
+            hidden: true
+      - name: ru_right
+        label: Орысша — оң баған
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.q}'
+        fields:
+          - name: q
+            label: Сұрақ
+            type: string
+          - name: a
+            label: Жауап
+            type: rich-text
+            options:
+              format: html
+          - name: id
+            label: Белгі (өзгертпеңіз)
+            type: string
+            hidden: true
+  - name: settings
+    label: Байланыс
+    type: file
+    path: _data/settings.json
+    format: json
+    fields:
+      - name: phone
+        label: Телефон (сайтта осылай көрінеді)
+        type: string
+      - name: phone_tel
+        label: Телефон қоңырау үшін (+7…, бос орынсыз)
+        type: string
+      - name: whatsapp
+        label: WhatsApp
+        type: string
+      - name: email
+        label: Пошта
+        type: string
+      - name: instagram
+        label: Instagram (@-сыз)
+        type: string
+      - name: address_kz
+        label: Мекенжай (қазақша)
+        type: string
+      - name: address_ru
+        label: Мекенжай (орысша)
+        type: string
+  - name: hero
+    label: Басты беттің бас мәтіні
+    type: file
+    path: _data/hero.json
+    format: json
+    fields:
+      - name: kz
+        label: Қазақша
+        type: object
+        fields:
+          - name: sub
+            label: Үстіндегі жазу
+            type: string
+          - name: title
+            label: Тақырып
+            type: string
+          - name: lead
+            label: Түсіндірме
+            type: text
+      - name: ru
+        label: Орысша
+        type: object
+        fields:
+          - name: sub
+            label: Үстіндегі жазу
+            type: string
+          - name: title
+            label: Тақырып
+            type: string
+          - name: lead
+            label: Түсіндірме
+            type: text
+  - name: orgs
+    label: Сертификат кімге керек (ұйымдар)
+    type: file
+    path: _data/orgs.json
+    format: json
+    fields:
+      - name: kz
+        label: Қазақша
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.text}'
+        fields:
+          - name: text
+            label: Атауы
+            type: text
+          - name: logo
+            label: Логотип
+            type: image
+          - name: url
+            label: Сілтеме (бос болуы мүмкін)
+            type: string
+      - name: ru
+        label: Орысша
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.text}'
+        fields:
+          - name: text
+            label: Атауы
+            type: text
+          - name: logo
+            label: Логотип
+            type: image
+          - name: url
+            label: Сілтеме (бос болуы мүмкін)
+            type: string
+  - name: levels
+    label: Деңгейлер
+    type: file
+    path: _data/levels.json
+    format: json
+    fields:
+      - name: kz
+        label: Қазақша
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.code} — {fields.name}'
+        fields:
+          - name: code
+            label: Код (A1…C2)
+            type: string
+          - name: name
+            label: Атауы
+            type: string
+          - name: desc
+            label: Сипаттамасы
+            type: text
+          - name: result
+            label: Нәтиже (пайыз)
+            type: string
+          - name: term
+            label: Сертификат мерзімі
+            type: string
+      - name: ru
+        label: Орысша
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.code} — {fields.name}'
+        fields:
+          - name: code
+            label: Код (A1…C2)
+            type: string
+          - name: name
+            label: Атауы
+            type: string
+          - name: desc
+            label: Сипаттамасы
+            type: text
+          - name: result
+            label: Нәтиже (пайыз)
+            type: string
+          - name: term
+            label: Сертификат мерзімі
+            type: string
+      - name: labels_kz
+        type: object
+        hidden: true
+        fields:
+          - name: result
+            type: string
+          - name: term
+            type: string
+      - name: labels_ru
+        type: object
+        hidden: true
+        fields:
+          - name: result
+            type: string
+          - name: term
+            type: string
+  - name: acts
+    label: Нормативтік актілер («Жүйе туралы»)
+    type: file
+    path: _data/acts.json
+    format: json
+    fields:
+      - name: kz
+        label: Қазақша — топтар
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.icon} {fields.title}'
+        fields:
+          - name: icon
+            label: Белгіше (эмодзи)
+            type: string
+          - name: title
+            label: Топ атауы
+            type: string
+          - name: acts
+            label: Құжаттар
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.title}'
+            fields:
+              - name: title
+                label: Атауы
+                type: string
+              - name: desc
+                label: Сипаттамасы
+                type: text
+              - name: source
+                label: Қай бұйрық
+                type: text
+              - name: url
+                label: Сілтеме
+                type: string
+      - name: ru
+        label: Орысша — топтар
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.icon} {fields.title}'
+        fields:
+          - name: icon
+            label: Белгіше (эмодзи)
+            type: string
+          - name: title
+            label: Топ атауы
+            type: string
+          - name: acts
+            label: Құжаттар
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.title}'
+            fields:
+              - name: title
+                label: Атауы
+                type: string
+              - name: desc
+                label: Сипаттамасы
+                type: text
+              - name: source
+                label: Қай бұйрық
+                type: text
+              - name: url
+                label: Сілтеме
+                type: string
+      - name: button_kz
+        label: Батырма жазуы (қаз)
+        type: string
+      - name: button_ru
+        label: Батырма жазуы (орыс)
+        type: string
+  - name: docs
+    label: Жүктелетін құжаттар
+    type: file
+    path: _data/docs.json
+    format: json
+    fields:
+      - name: rules_kz
+        label: Тестілеуді өткізу ережелері (қаз, Word/PDF)
+        type: file
+      - name: rules_ru
+        label: Правила проведения тестирования (орыс)
+        type: file
+      - name: instr_kz
+        label: Нұсқаулық PDF (қаз)
+        type: file
+      - name: instr_ru
+        label: Инструкция PDF (орыс)
+        type: file
+      - name: memo_kz
+        label: Жадынама суреті (қаз)
+        type: image
+      - name: memo_ru
+        label: Памятка суреті (орыс)
+        type: image
